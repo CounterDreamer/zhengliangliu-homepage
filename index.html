@@ -1,525 +1,767 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zhengliang Liu's Home Page</title><!-- 可修改：浏览器标签页标题 -->
+    <meta name="description" content="Academic Personal Homepage - Personal introduction and research">
+    <title>Academic Personal Homepage</title>
     
-    <!-- SEO 优化：网站描述和关键词 -->
-    <meta name="description" content="Zhengliang Liu's Academic Homepage - Research, Publications, and Academic Profile"><!-- 可修改：网站描述，用于搜索引擎显示 -->
-    <meta name="keywords" content="Zhengliang Liu, Academic, Research, Publications"><!-- 可修改：关键词，帮助搜索引擎索引 -->
-    <meta name="author" content="Zhengliang Liu"><!-- 可修改：作者信息 -->
+    <!-- 字体 - 使用 Inter 字体增加高级感 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Open Graph 标签：用于社交媒体分享 -->
-    <meta property="og:title" content="Zhengliang Liu's Home Page"><!-- 可修改：社交媒体分享时的标题 -->
-    <meta property="og:description" content="Academic Homepage of Zhengliang Liu"><!-- 可修改：社交媒体分享时的描述 -->
-    <meta property="og:type" content="website">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="page-wrapper">
-        <header class="site-header">
-            <h1 class="site-title">Zhengliang Liu's Home Page</h1><!-- 可修改：页面左上角标题 -->
-            <nav class="navbar">
-                <a href="#home" class="nav-link active" data-page="home">Home</a>
-                <a href="#publications" class="nav-link" data-page="publications">Publications</a>
-            </nav>
-        </header>
-
-        <!-- Home Page -->
-        <div id="home-page" class="page-content active">
-            <main class="container">
-                <!-- Profile Section -->
-                <section id="home" class="profile-section">
-                    <div class="profile-content">
-                        <div class="profile-info">
-                            <h1 class="name">Zhengliang Liu (刘正良)</h1><!-- 可修改：姓名（中英文） -->
-                            <p class="title">PH.D. student / University of Georgia, 2026.</p><!-- 可修改：头衔/单位/年份 -->
-                            <p class="bio">
-                                Large Language Models in Healthcare, AI for Social Good, Multi-modal Learning.<!-- 可修改：个人简介（Bio） -->
-                            </p>
-                            <div class="contact-links">
-                                <a href="mailto:zl18864@uga.edu" class="contact-link"><!-- 可修改：邮箱 mailto 链接 -->
-                                    <i class="fas fa-envelope"></i>
-                                    <span>zl18864@uga.edu</span><!-- 可修改：邮箱展示文本 -->
-                                </a>
-                                <a href="https://scholar.google.com/citations?user=p8tAM0AAAAAJ&hl=en" class="contact-link" target="_blank" rel="noopener"><!-- 可修改：Google Scholar 链接 -->
-                                    <i class="fas fa-graduation-cap"></i>
-                                    <span>Google Scholar</span>
-                                </a>
-                                <!-- <a href="#" class="contact-link" target="_blank" rel="noopener"><!-- 可修改：GitHub 链接 -->
-                                    <!-- <i class="fab fa-github"></i> -->
-                                    <!-- <!-- <span>GitHub</span> -->
-                                <!-- </a> --> -->
-                                <a href="https://www.linkedin.com/in/zhengliang-liu" class="contact-link" target="_blank" rel="noopener"><!-- 可修改：LinkedIn 链接 -->
-                                    <i class="fab fa-linkedin"></i>
-                                    <span>LinkedIn</span>
-                                </a>
-                                <!-- <a href="#" class="contact-link" target="_blank" rel="noopener"><!-- 可修改：ORCID 链接 -->
-                                    <i class="fab fa-orcid"></i>
-                                    <!-- <span>ORCID</span>
-                                </a> --> -->
-                            </div>
-                        </div>
-                        <div class="profile-image">
-                            <img src="assets/Zhengliang-Liu.jpg" alt="Welcome to my homepage" id="profile-photo"><!-- 可修改：头像图片路径/alt 文本（建议放到 assets/profile.jpg） -->
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Two Column Layout -->
-                <div class="two-column-layout">
-                    <!-- Left Column -->
-                    <div class="column-left">
-                        <!-- Education Section -->
-                        <section class="content-section">
-                            <h2 class="section-title">Education</h2><!-- 可修改：板块标题（Education） -->
-                            <div class="timeline">
-                                <div class="timeline-item">
-                                    <div class="timeline-icon">
-                                        <i class="fas fa-university"></i>
-                                    </div>
-                                    <div class="timeline-content">
-                                        <h3>University of Georgia</h3><!-- 可修改：学校/单位名称（Education 1） -->
-                                        <p class="degree">PhD in Computer Science</p><!-- 可修改：学位/专业（Education 1） -->
-                                        <p class="period">Expected graduation 06/2026</p><!-- 可修改：时间（Education 1） -->
-                                    </div>
-                                </div>
-                                <div class="timeline-item">
-                                    <div class="timeline-icon">
-                                        <i class="fas fa-university"></i>
-                                    </div>
-                                    <div class="timeline-content">
-                                        <h3>Washington University in St. Louis</h3><!-- 可修改：学校/单位名称（Education 2） -->
-                                        <p class="degree">Master of Science in Computer Science</p><!-- 可修改：学位/专业（Education 2） -->
-                                        <p class="period">2021</p><!-- 可修改：时间（Education 2） -->
-                                    </div>
-                                </div>
-                                <div class="timeline-item">
-                                    <div class="timeline-icon">
-                                        <i class="fas fa-university"></i>
-                                    </div>
-                                    <div class="timeline-content">
-                                        <h3>University of Wisconsin, Madiso</h3><!-- 可修改：学校/单位名称（Education 3） -->
-                                        <p class="degree">Bachelor of Arts in Computer Science</p><!-- 可修改：学位/专业（Education 3） -->
-                                        <p class="period">2018</p><!-- 可修改：时间（Education 3） -->
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Experience Section -->
-                        <section class="content-section">
-                            <h2 class="section-title">Experience</h2><!-- 可修改：板块标题（Teaching Experience） -->
-                            <div class="timeline">
-                                <div class="timeline-item">
-                                    <div class="timeline-icon">
-                                        <i class="fas fa-hospital"></i>
-                                    </div>
-                                    <div class="timeline-content">
-                                        <h3>Organization / Lab Name</h3><!-- 可修改：单位/实验室名称（Experience 1） -->
-                                        <p class="position">Position / Role</p><!-- 可修改：职位/角色（Experience 1） -->
-                                        <p class="period">Start - End</p><!-- 可修改：时间（Experience 1） -->
-                                    </div>
-                                </div>
-                                <div class="timeline-item">
-                                    <div class="timeline-icon">
-                                        <i class="fas fa-building"></i>
-                                    </div>
-                                    <div class="timeline-content">
-                                        <h3>Organization / Lab Name</h3><!-- 可修改：单位/实验室名称（Experience 2） -->
-                                        <p class="position">Position / Role</p><!-- 可修改：职位/角色（Experience 2） -->
-                                        <p class="period">Start - End</p><!-- 可修改：时间（Experience 2） -->
-                                    </div>
-                                </div>
-                                <div class="timeline-item">
-                                    <div class="timeline-icon">
-                                        <i class="fas fa-building"></i>
-                                    </div>
-                                    <div class="timeline-content">
-                                        <h3>Organization / Lab Name</h3><!-- 可修改：单位/实验室名称（Experience 3） -->
-                                        <p class="position">Position / Role</p><!-- 可修改：职位/角色（Experience 3） -->
-                                        <p class="period">Start - End</p><!-- 可修改：时间（Experience 3） -->
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-
-                    <!-- Right Column -->
-                    <div class="column-right">
-                        <!-- Honors & Awards Section -->
-                        <section class="content-section">
-                            <h2 class="section-title">Honors & Awards</h2><!-- 可修改：板块标题（Honors & Awards） -->
-                            <ul class="list">
-                                <li>Dean's List, University of Wisconsin<span class="year">2016-2018</span></li><!-- 可修改：奖项 1 + 年份 -->
-                                <li>Graduated with Distinction,  University of Wisconsin<span class="year">2018</span></li><!-- 可修改：奖项 2 + 年份 -->
-                                <li>Student Travel Grant (MICCAI)<span class="year">2023</span></li>
-                            </ul>
-                        </section>
-
-                        <!-- Service Section -->
-                        <section class="content-section">
-                            <h2 class="section-title">Service</h2><!-- 可修改：板块标题（Service） -->
-                            <ul class="list">
-                                <li>Service Item (e.g., Reviewer / PC Member) </li><!-- 可修改：学术服务 1 -->
-                                <li>Service Item (e.g., Reviewer / PC Member) </li><!-- 可修改：学术服务 2 -->
-                                <li>Service Item (e.g., Reviewer / PC Member) </li><!-- 可修改：学术服务 3 -->
-                                <li>Service Item (e.g., Reviewer / PC Member) </li><!-- 可修改：学术服务 4 -->
-                                <li>Service Item (e.g., Reviewer / PC Member) </li><!-- 可修改：学术服务 5 -->
-                                <li>Service Item (e.g., Reviewer / PC Member) </li><!-- 可修改：学术服务 6 -->
-                            </ul>
-                        </section>
-                    </div>
-                </div>
-
-                <!-- News Section -->
-                <section class="content-section">
-                    <h2 class="section-title">News</h2><!-- 可修改：板块标题（News） -->
-                    <div class="news-section">
-                        <!-- 可修改：从这里开始编辑 News 列表（年份/日期/内容），可复制 .news-item 增删 -->
-                        <div class="news-year">2025</div>
-                        <div class="news-item">
-                            <span class="news-date">Nov 17</span><!-- 可修改：News 日期 -->
-                            <span class="news-content">🎉 A paper is accepted by <strong>NeurIPS 2025 Workshop</strong>!</span><!-- 可修改：News 内容 -->
-                        </div>
-                        <div class="news-item">
-                            <span class="news-date">Aug 25</span>
-                            <span class="news-content">🎉 A paper is accepted by <strong>QIML AAAI Fall 2025 Symposium</strong>!</span>
-                        </div>
-                        <div class="news-item">
-                            <span class="news-date">Aug 13</span>
-                            <span class="news-content">🎉 A paper is accepted by <strong>IEEE Transactions on Biomedical Engineering (IF=4.5)</strong>!</span>
-                        </div>
-                        <div class="news-item">
-                            <span class="news-date">Aug 10</span>
-                            <span class="news-content">🎉 A paper is accepted by <strong>2025 IEEE International Conference on Quantum Artificial Intelligence</strong>!</span>
-                        </div>
-                        <div class="news-item">
-                            <span class="news-date">Jun 13</span>
-                            <span class="news-content">🎉 A paper is accepted by <strong>IEEE Transactions on Neural Networks and Learning Systems (IF=10.2)</strong>!</span>
-                        </div>
-                        <div class="news-item">
-                            <span class="news-date">Apr 16</span>
-                            <span class="news-content">🎓 I transferred to the <strong>University of Georgia, Franklin College of Arts and Sciences, School of Computing</strong> as a PhD student of Computer Science.</span>
-                        </div>
-                        <div class="news-item">
-                            <span class="news-date">Mar 19</span>
-                            <span class="news-content">👨‍🔬 I joined <strong>Harvard Medical School and Massachusetts General Hospital</strong> as an intern, guided by Prof. Xiang Li.</span>
-                        </div>
-                        <div class="news-item">
-                            <span class="news-date">Jan 21</span>
-                            <span class="news-content">🎉 A paper is accepted by <strong>ICLR 2025</strong>!</span>
-                        </div>
-                        <div class="news-item">
-                            <span class="news-date">Jan 01</span>
-                            <span class="news-content">🎉 A paper is accepted by <strong>ISBI 2025</strong> (oral presentation), see you in Houston!</span>
-                        </div>
-                        <div class="news-year">2024</div>
-                        <div class="news-item">
-                            <span class="news-date">Dec 08</span>
-                            <span class="news-content">🎉 A paper is accepted by <strong>AAAI 2025</strong>!</span>
-                        </div>
-                        <div class="news-item">
-                            <span class="news-date">Oct 30</span>
-                            <span class="news-content">🎉 A paper is accepted by <strong>IEEE Reviews in Biomedical Engineering (IF=17.2)</strong>!</span>
-                        </div>
-                        <div class="news-item">
-                            <span class="news-date">Sep 23</span>
-                            <span class="news-content">🎉 A paper is accepted by <strong>NeurIPS 2024</strong>, see you in Vancouver!</span>
-                        </div>
-                        <div class="news-item">
-                            <span class="news-date">Aug 18</span>
-                            <span class="news-content">🎉 A paper is accepted by <strong>ECCV 2024 Workshop</strong>!</span>
-                        </div>
-                        <div class="news-item">
-                            <span class="news-date">May 30</span>
-                            <span class="news-content">🎉 A paper is accepted by <strong>ICIC 2024</strong> (oral presentation)!</span>
-                        </div>
-                        <div class="news-item">
-                            <span class="news-date">Apr 08</span>
-                            <span class="news-content">🎉 A paper is accepted by <strong>Automotive Innovation (IF=6.1)</strong>!</span>
-                        </div>
-                        <div class="news-year">2023</div>
-                        <div class="news-item">
-                            <span class="news-date">Oct 10</span>
-                            <span class="news-content">🎓 I will join the <strong>University of Georgia, College of Engineering</strong> as a PhD student, guided by Prof. Tianming Liu.</span>
-                        </div>
-                        <div class="news-item">
-                            <span class="news-date">Jul 01</span>
-                            <span class="news-content">👨‍🔬 I joined the <strong>Chinese University of Hong Kong (Shenzhen), School of Data Science</strong> as a research assistant, guided by Prof. Ruimao Zhang.</span>
-                        </div>
-                        <div class="news-year">2022</div>
-                        <div class="news-item">
-                            <span class="news-date">Apr 24</span>
-                            <span class="news-content">👨‍🔬 I joined the <strong>State Key Laboratory of Computer Architecture, Institute of Computing Technology, Chinese Academy of Sciences (ICTCAS)</strong> as an intern, guided by Prof. Yinhe Han.</span>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Selected Publications Section -->
-                <section class="content-section">
-                    <h2 class="section-title">Selected Publications</h2><!-- 可修改：板块标题（Selected Publications） -->
-                    <div class="publications">
-                        <div class="publication-item">
-                            <div class="publication-thumbnail">
-                                <img src="https://via.placeholder.com/150x100/4a90e2/ffffff?text=Paper+1" alt="Publication thumbnail"><!-- 可修改：论文缩略图（Selected Pub 1） -->
-                            </div>
-                            <div class="publication-details">
-                                <h3 class="publication-title">Bridging Classical and Quantum Computing for Next-Generation Language Models</h3><!-- 可修改：论文标题（Selected Pub 1） -->
-                                <p class="publication-authors">
-                                    Yi Pan*, <strong>Zhengliang Liu</strong>, Junhao Chen, Yiwei Li, Huaqin Zhao, Lin Zhao, Yohannes Abate, <!-- 可修改：作者列表（Selected Pub 1） -->
-                                    Yingfeng Wang†, Tianming Liu† (* <em>equal contribution</em>) († <em>corresponding author</em>)
-                                </p>
-                                <p class="publication-venue">AAAI QIML 2025 Conference</p><!-- 可修改：会议/期刊（Selected Pub 1） -->
-                                <p class="publication-abstract">
-                                    We introduce Adaptive Quantum-Classical Fusion (AQCF), the first framework to bridge quantum and classical computing 
-                                    through dynamic, quantum-classical co-design for next-generation language models.<!-- 可修改：摘要（Selected Pub 1） -->
-                                </p>
-                                <div class="publication-links">
-                                    <a href="#" class="pub-link">Read more</a><!-- 可修改：Read more 链接（Selected Pub 1） -->
-                                    <a href="#" class="pub-link">[Paper]</a><!-- 可修改：Paper 链接（Selected Pub 1） -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="publication-item">
-                            <div class="publication-thumbnail">
-                                <img src="https://via.placeholder.com/150x100/4a90e2/ffffff?text=Paper+2" alt="Publication thumbnail"><!-- 可修改：论文缩略图（Selected Pub 2） -->
-                            </div>
-                            <div class="publication-details">
-                                <h3 class="publication-title">Chatradio-valuer: A chat large language model for generalizable radiology report generation based on multi-institution and multi-system data</h3><!-- 可修改：论文标题（Selected Pub 2） -->
-                                <p class="publication-authors">
-                                    Tianyang Zhong, Wei Zhao, Yutong Zhang, Yi Pan, Peixin Dong, Zuowei Jiang, <strong>Zhengliang Liu</strong>, Yifan Zhou, Xiaoyan Kui, Youlan Shang, Lin Zhao, Li Yang, Yaonai Wei, Zhuoyi Li, Jiadong Zhang, Longtao Yang, Hao Chen, Huan Zhao, Yuxiao Liu, Ning Zhu, Yiwei Li, Yisong Wang, Jiaqi Yao, Jiaqi Wang, Ying Zeng, Lei He, Chao Zheng, Zhixue Zhang, Ming Li, Zhengliang Liu, Haixing Dai, Zihao Wu, Lu Zhang, Shu Zhang, Xiaoyan Cai, Xintao Hu, Shijie Zhao, Xi Jiang, Xin Zhang, Wei Liu, Xiang Li†, Dajiang Zhu†, Lei Guo†, Dinggang Shen†, Junwei Han†, Tianming Liu†, Jun Liu†, Tuo Zhang†<!-- 可修改：作者列表（Selected Pub 2） -->
-                                </p>
-                                <p class="publication-venue">IEEE Transactions on Biomedical Engineering 2025 Journal (IF=4.5)</p><!-- 可修改：会议/期刊（Selected Pub 2） -->
-                                <p class="publication-abstract">
-                                    Focuses on a chat large language model for radiology report generation.<!-- 可修改：摘要（Selected Pub 2） -->
-                                </p>
-                                <div class="publication-links">
-                                    <a href="#" class="pub-link">Read more</a><!-- 可修改：Read more 链接（Selected Pub 2） -->
-                                    <a href="#" class="pub-link">[Paper]</a><!-- 可修改：Paper 链接（Selected Pub 2） -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="publication-item">
-                            <div class="publication-thumbnail">
-                                <img src="https://via.placeholder.com/150x100/4a90e2/ffffff?text=Paper+3" alt="Publication thumbnail"><!-- 可修改：论文缩略图（Selected Pub 3） -->
-                            </div>
-                            <div class="publication-details">
-                                <h3 class="publication-title">MoIQAE: Quantum Autoencoder for Molecular Representation Learning</h3><!-- 可修改：论文标题（Selected Pub 3） -->
-                                <p class="publication-authors">
-                                    Yi Pan*, <strong>Zhengliang Liu†</strong>, Wei Ruan, Dajiang Zhu, Xiang Li, Yohannes Abate, <!-- 可修改：作者列表（Selected Pub 3） -->
-                                    Yingfeng Wang†, Tianming Liu† (* <em>equal contribution</em>) († <em>corresponding author</em>)
-                                </p>
-                                <p class="publication-venue">QAI 2025 Conference</p><!-- 可修改：会议/期刊（Selected Pub 3） -->
-                                <p class="publication-abstract">
-                                    Quantum Autoencoder for Molecular Representation Learning.<!-- 可修改：摘要（Selected Pub 3） -->
-                                </p>
-                                <div class="publication-links">
-                                    <a href="#" class="pub-link">Read more</a><!-- 可修改：Read more 链接（Selected Pub 3） -->
-                                    <a href="#" class="pub-link">[Paper]</a><!-- 可修改：Paper 链接（Selected Pub 3） -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="publication-item">
-                            <div class="publication-thumbnail">
-                                <img src="https://via.placeholder.com/150x100/4a90e2/ffffff?text=Paper+4" alt="Publication thumbnail"><!-- 可修改：论文缩略图（Selected Pub 4） -->
-                            </div>
-                            <div class="publication-details">
-                                <h3 class="publication-title">Argus: Leveraging Multi-View Images for Improved 3D Scene Understanding with Large Language Models</h3><!-- 可修改：论文标题（Selected Pub 4） -->
-                                <p class="publication-authors">
-                                    Yifan Xu, Chao Zhang, <strong>Zhengliang Liu</strong>, Xiaoyan Wang, Ruifei Ma, Yiwei Li, Zihao Wu, Zeju Li, <!-- 可修改：作者列表（Selected Pub 4） -->
-                                    Xiangde Liu† († <em>corresponding author</em>)
-                                </p>
-                                <p class="publication-venue">IEEE Transactions on Neural Networks and Learning Systems 2025 Journal (IF=10.2)</p><!-- 可修改：会议/期刊（Selected Pub 4） -->
-                                <p class="publication-abstract">
-                                    Discusses using multi-view images for 3D scene understanding with large language models.<!-- 可修改：摘要（Selected Pub 4） -->
-                                </p>
-                                <div class="publication-links">
-                                    <a href="#" class="pub-link">Read more</a><!-- 可修改：Read more 链接（Selected Pub 4） -->
-                                    <a href="#" class="pub-link">[Paper]</a><!-- 可修改：Paper 链接（Selected Pub 4） -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="publication-item">
-                            <div class="publication-thumbnail">
-                                <img src="https://via.placeholder.com/150x100/4a90e2/ffffff?text=Paper+5" alt="Publication thumbnail"><!-- 可修改：论文缩略图（Selected Pub 5） -->
-                            </div>
-                            <div class="publication-details">
-                                <h3 class="publication-title">ECHOPulse: ECG Controlled Echocardiograms Video Generation</h3><!-- 可修改：论文标题（Selected Pub 5） -->
-                                <p class="publication-authors">
-                                    Yiwei Li, Sekeun Kim, Zihao Wu, <strong>Zhengliang Liu</strong>, Yi Pan, Pengfei Jin, Sifan Song, Yucheng Shi, Xiaowei Yu, Tianze Yang, Tianming Liu†, Quanzheng Li†, Xiang Li†<!-- 可修改：作者列表（Selected Pub 5） -->
-                                </p>
-                                <p class="publication-venue">ICLR 2025 Conference</p><!-- 可修改：会议/期刊（Selected Pub 5） -->
-                                <p class="publication-abstract">
-                                    Proposes an ECG-conditioned ECHO video generation model, detailing advancements in acceleration and conditioning.<!-- 可修改：摘要（Selected Pub 5） -->
-                                </p>
-                                <div class="publication-links">
-                                    <a href="#" class="pub-link">Read more</a><!-- 可修改：Read more 链接（Selected Pub 5） -->
-                                    <a href="#" class="pub-link">[Paper]</a><!-- 可修改：Paper 链接（Selected Pub 5） -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </main>
-        </div>
-
-        <!-- Publications Page -->
-        <div id="publications-page" class="page-content">
-            <main class="container">
-                <div class="publications-page-header">
-                    <div class="publications-intro">
-                        <div class="blue-bar"></div>
-                        <p class="publications-disclaimer">
-                            All papers that have not been peer-reviewed will not appear here, including preprints. 
-                            You can access my all of papers at <a href="https://scholar.google.com/citations?user=p8tAM0AAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.<!-- 可修改：Publications 页 Google Scholar 链接 -->
-                        </p>
-                    </div>
-                </div>
-
-                <div class="publications-layout">
-                    <div class="publications-main">
-                        <div class="publications-year-section" data-year="2025">
-                            <div class="publications-list">
-                                <div class="publication-item-full">
-                                    <div class="publication-thumbnail">
-                                        <img src="https://via.placeholder.com/150x100/4a90e2/ffffff?text=Paper+1" alt="Publication thumbnail">
-                                    </div>
-                                    <div class="publication-details">
-                                        <h3 class="publication-title">Bridging Classical and Quantum Computing for Next-Generation Language Models</h3>
-                                        <p class="publication-authors">
-                                            Yi Pan*, <strong>Zhengliang Liu</strong>, Junhao Chen, Yiwei Li, Huaqin Zhao, Lin Zhao, Yohannes Abate, <!-- 可修改：作者列表（Publications 2025 - 1） -->
-                                            Yingfeng Wang†, Tianming Liu† (* <em>equal contribution</em>) († <em>corresponding author</em>)
-                                        </p>
-                                        <p class="publication-venue">AAAI QIML 2025 Conference</p>
-                                        <p class="publication-abstract">
-                                            Introduces Adaptive Quantum-Classical Fusion (AQCF) for bridging quantum and classical computing in language models.
-                                        </p>
-                                        <div class="publication-links">
-                                            <a href="#" class="pub-link">Read more</a>
-                                            <a href="#" class="pub-link">[Paper]</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="publication-item-full">
-                                    <div class="publication-thumbnail">
-                                        <img src="https://via.placeholder.com/150x100/4a90e2/ffffff?text=Paper+2" alt="Publication thumbnail">
-                                    </div>
-                                    <div class="publication-details">
-                                        <h3 class="publication-title">Chatradio-valuer: A chat large language model for generalizable radiology report generation based on multi-institution and multi-system data</h3>
-                                        <p class="publication-authors">
-                                            Tianyang Zhong, Wei Zhao, Yutong Zhang, Yi Pan, Peixin Dong, Zuowei Jiang, <strong>Zhengliang Liu</strong>, Yifan Zhou, Xiaoyan Kui, Youlan Shang, Lin Zhao, Li Yang, Yaonai Wei, Zhuoyi Li, Jiadong Zhang, Longtao Yang, Hao Chen, Huan Zhao, Yuxiao Liu, Ning Zhu, Yiwei Li, Yisong Wang, Jiaqi Yao, Jiaqi Wang, Ying Zeng, Lei He, Chao Zheng, Zhixue Zhang, Ming Li, Zhengliang Liu, Haixing Dai, Zihao Wu, Lu Zhang, Shu Zhang, Xiaoyan Cai, Xintao Hu, Shijie Zhao, Xi Jiang, Xin Zhang, Wei Liu, Xiang Li†, Dajiang Zhu†, Lei Guo†, Dinggang Shen†, Junwei Han†, Tianming Liu†, Jun Liu†, Tuo Zhang†<!-- 可修改：作者列表（Publications 2025 - 2） -->
-                                        </p>
-                                        <p class="publication-venue">IEEE Transactions on Biomedical Engineering 2025 Journal (IF=4.5)</p>
-                                        <p class="publication-abstract">
-                                            Focuses on a chat large language model for radiology report generation.
-                                        </p>
-                                        <div class="publication-links">
-                                            <a href="#" class="pub-link">Read more</a>
-                                            <a href="#" class="pub-link">[Paper]</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="publication-item-full">
-                                    <div class="publication-thumbnail">
-                                        <img src="https://via.placeholder.com/150x100/4a90e2/ffffff?text=Paper+3" alt="Publication thumbnail">
-                                    </div>
-                                    <div class="publication-details">
-                                        <h3 class="publication-title">MoIQAE: Quantum Autoencoder for Molecular Representation Learning</h3>
-                                        <p class="publication-authors">
-                                            Yi Pan*, <strong>Zhengliang Liu†</strong>, Wei Ruan, Dajiang Zhu, Xiang Li, Yohannes Abate, <!-- 可修改：作者列表（Publications 2025 - 3） -->
-                                            Yingfeng Wang†, Tianming Liu† (* <em>equal contribution</em>) († <em>corresponding author</em>)
-                                        </p>
-                                        <p class="publication-venue">QAI 2025 Conference</p>
-                                        <p class="publication-abstract">
-                                            About a quantum autoencoder for molecular representation learning.
-                                        </p>
-                                        <div class="publication-links">
-                                            <a href="#" class="pub-link">Read more</a>
-                                            <a href="#" class="pub-link">[Paper]</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="publication-item-full">
-                                    <div class="publication-thumbnail">
-                                        <img src="https://via.placeholder.com/150x100/4a90e2/ffffff?text=Paper+4" alt="Publication thumbnail">
-                                    </div>
-                                    <div class="publication-details">
-                                        <h3 class="publication-title">Argus: Leveraging Multi-View Images for Improved 3D Scene Understanding with Large Language Models</h3>
-                                        <p class="publication-authors">
-                                            Yifan Xu, Chao Zhang, <strong>Zhengliang Liu</strong>, Xiaoyan Wang, Ruifei Ma, Yiwei Li, Zihao Wu, Zeju Li, <!-- 可修改：作者列表（Publications 2025 - 4） -->
-                                            Xiangde Liu† († <em>corresponding author</em>)
-                                        </p>
-                                        <p class="publication-venue">IEEE Transactions on Neural Networks and Learning Systems 2025 Journal (IF=10.2)</p>
-                                        <p class="publication-abstract">
-                                            Discusses using multi-view images for 3D scene understanding with large language models.
-                                        </p>
-                                        <div class="publication-links">
-                                            <a href="#" class="pub-link">Read more</a>
-                                            <a href="#" class="pub-link">[Paper]</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="publication-item-full">
-                                    <div class="publication-thumbnail">
-                                        <img src="https://via.placeholder.com/150x100/4a90e2/ffffff?text=Paper+5" alt="Publication thumbnail">
-                                    </div>
-                                    <div class="publication-details">
-                                        <h3 class="publication-title">ECHOPulse: ECG Controlled Echocardiograms Video Generation</h3>
-                                        <p class="publication-authors">
-                                            Yiwei Li, Sekeun Kim, Zihao Wu, <strong>Zhengliang Liu</strong>, Yi Pan, Pengfei Jin, Sifan Song, Yucheng Shi, Xiaowei Yu, Tianze Yang, Tianming Liu†, Quanzheng Li†, Xiang Li†<!-- 可修改：作者列表（Publications 2025 - 5） -->
-                                        </p>
-                                        <p class="publication-venue">ICLR 2025 Conference</p>
-                                        <p class="publication-abstract">
-                                            Proposes an ECG-conditioned ECHO video generation model, detailing advancements in acceleration and conditioning.
-                                        </p>
-                                        <div class="publication-links">
-                                            <a href="#" class="pub-link">Read more</a>
-                                            <a href="#" class="pub-link">[Paper]</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="publications-year-section" data-year="2024" style="display: none;">
-                            <div class="publications-list">
-                                <!-- 2024 publications would go here -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="publications-sidebar">
-                        <div class="year-filter">
-                            <div class="year-item active" data-year="2025">2025</div>
-                            <div class="year-item" data-year="2024">2024</div>
-                        </div>
-                    </div>
-                </div>
-            </main>
+    <!-- 动态背景特效 - 参考原网站 https://hq0709.github.io/ -->
+    <div class="background-container">
+        <div class="color-bands">
+            <div class="color-band"></div>
+            <div class="color-band"></div>
+            <div class="color-band"></div>
+            <div class="color-band"></div>
+            <div class="floating-orb"></div>
+            <div class="floating-orb"></div>
+            <div class="floating-orb"></div>
         </div>
     </div>
+    <div class="background-overlay"></div>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg">
+        <!-- 导航栏内部容器：与中间内容区域宽度对齐 -->
+        <div class="nav-container">
+            <!-- TODO: 修改网站名称/个人姓名 -->
+            <a class="navbar-brand" href="index.html">Academic Homepage</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- TODO: 修改导航链接的href指向实际页面 -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="publications.html">Publications</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <div class="container">
+            <!-- 个人资料卡片 -->
+            <section class="profile-section">
+                <!-- TODO: 替换头像图片，路径为 images/avatar.jpg -->
+                <img src="images/avatar.jpg" alt="Profile Avatar" class="profile-avatar" onerror="this.style.display='none'; this.parentElement.querySelector('.avatar-placeholder').style.display='block';">
+                <!-- 头像占位符（当头像不存在时显示） -->
+                <div class="avatar-placeholder" style="display:none; width:200px; height:200px; border-radius:50%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); margin:0 auto 1.75rem; line-height:200px; text-align:center; color:white; font-size:4rem; font-weight:bold;">?</div>
+                
+                <!-- TODO: 修改个人姓名 -->
+                <h1 class="profile-name">Zhengliang Liu (刘正良)</h1>
+                
+                <!-- TODO: 修改职位和机构信息 -->
+                <p class="profile-position">
+                    <!-- TODO: 修改机构名称和链接 -->
+                    <a href="https://www.uga.edu" target="_blank">University of Georgia</a>
+                    <!-- TODO: 修改学位/职位 -->
+                    <span>Ph.D. Student</span>
+                </p>
+                
+                <!-- TODO: 修改具体职位信息 -->
+                <p class="profile-position">
+                    <!-- TODO: 修改院系/实验室名称 -->
+                    <span>Computer Science</span>
+                    <!-- TODO: 修改时间 -->
+                    <span>Sep. 2021 - Jun. 2026 (expected graduation)</span>
+                </p>
+                
+                <!-- TODO: 修改研究方向 -->
+                <p class="profile-bio">
+                    Large Language Models in Healthcare, AI for Social Good, Multi-modal Learning
+                </p>
+                
+                <!-- TODO: 修改联系邮箱 -->
+                <p class="text-center email-text">
+                    zl18864@uga.edu
+                </p>
+                
+                <!-- 社交媒体链接 -->
+                <div class="social-links">
+                    <!-- TODO: 修改各个社交媒体的链接 -->
+                    <!-- Google Scholar -->
+                    <a href="https://scholar.google.com/citations?user=p8tAM0AAAAAJ&hl=en" class="social-link" target="_blank" title="Google Scholar">
+                        Google Scholar
+                    </a>
+                    <!-- GitHub -->
+                    <a href="https://github.com/zl-liu" class="social-link" target="_blank" title="GitHub">
+                        GitHub
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/zhengliang-liu" class="social-link" target="_blank" title="LinkedIn">
+                        LinkedIn
+                    </a>
+                    <!-- ORCID -->
+                    <a href="https://orcid.org/my-orcid?orcid=0000-0001-7061-6714" class="social-link" target="_blank" title="ORCID">
+                        ORCID
+                    </a>
+                </div>
+            </section>
+            
+            <!-- 合并的经历部分 - 两行两列布局 -->
+            <section class="section-card experience-section">
+                <div class="row g-4">
+                    <!-- 第一行左列 - Education -->
+                    <div class="col-md-6">
+                        <div class="experience-group">
+                            <h2 class="section-title">Education</h2>
+                            <div class="timeline compact-timeline">
+                                <!-- 教育经历 1 -->
+                                <div class="timeline-item">
+                                    <div class="timeline-title">University of Georgia</div>
+                                    <div class="timeline-subtitle">Ph.D. in Computer Science, GPA: 4.0/4.0</div>
+                                    <div class="timeline-date">Jun. 2026 (expected graduation)</div>
+                                </div>
+                                
+                                <!-- 教育经历 2 -->
+                                <div class="timeline-item">
+                                    <div class="timeline-title">Washington University in St. Louis</div>
+                                    <div class="timeline-subtitle">Master of Science in Computer Science, GPA: 3.9/4.0</div>
+                                    <div class="timeline-date">2021</div>
+                                </div>
 
-    <footer class="footer">
-        <p>Copyright © 2026 Zhengliang Liu. All Rights Reserved.</p><!-- 可修改：页脚版权信息 -->
+                                <!-- 教育经历 3 -->
+                                <div class="timeline-item">
+                                    <div class="timeline-title">University of Wisconsin, Madison</div>
+                                    <div class="timeline-subtitle">Bachelor of Arts in Computer Science, GPA: 3.904/4.0</div>
+                                    <div class="timeline-date">2018</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 第一行右列 - Honors & Awards -->
+                    <div class="col-md-6">
+                        <div class="experience-group">
+                            <h2 class="section-title">Honors &amp; Awards</h2>
+                            <div class="compact-award-list">
+                                <div class="award-item compact-award-item">
+                                    <div class="award-icon">🏆</div>
+                                    <div class="award-content">
+                                        <div class="award-title">Dean's List</div>
+                                        <div class="award-description">University of Wisconsin, Madison, 2016-2018</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="award-item compact-award-item">
+                                    <div class="award-icon">🎖️</div>
+                                    <div class="award-content">
+                                        <div class="award-title">Graduated with Distinction</div>
+                                        <div class="award-description">University of Wisconsin, Madison, 2018</div>
+                                    </div>
+                                </div>
+
+                                <div class="award-item compact-award-item">
+                                    <div class="award-icon">🎖️</div>
+                                    <div class="award-content">
+                                        <div class="award-title">Student Travel Grant</div>
+                                        <div class="award-description">MICCAI, 2023</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 第二行左列 - Teaching Experience -->
+                    <div class="col-md-6">
+                        <div class="experience-group">
+                            <h2 class="section-title">Teaching Experience</h2>
+                            <div class="timeline compact-timeline">
+                                <!-- 经历 1 -->
+                                <div class="timeline-item">
+                                    <div class="timeline-title">Graduate Teaching Assistant</div>
+                                    <div class="timeline-subtitle">CSCI 4380/6380 Data Mining</div>
+                                    <div class="timeline-date">Fall 2021, University of Georgia</div>
+                                </div>
+                                
+                                <!-- 经历 2 -->
+                                <div class="timeline-item">
+                                    <div class="timeline-title">Graduate Teaching Assistant</div>
+                                    <div class="timeline-subtitle">CSCI 4550/6550 Artificial Intelligence</div>
+                                    <div class="timeline-date">Fall 2021, University of Georgia</div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-title">Graduate Teaching Assistant</div>
+                                    <div class="timeline-subtitle">CSCI 4550/6550 Artificial Intelligence</div>
+                                    <div class="timeline-date">Spring 2022, University of Georgia</div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-title">Graduate Teaching Assistant</div>
+                                    <div class="timeline-subtitle">CSCI 4550/6550 Artificial Intelligence</div>
+                                    <div class="timeline-date">Fall 2022, University of Georgia</div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-title">Instructor</div>
+                                    <div class="timeline-subtitle">CSCI 1301/1301L Introduction to Computing and Programming</div>
+                                    <div class="timeline-date">Spring 2023, University of Georgia</div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-title">Instructor</div>
+                                    <div class="timeline-subtitle">CSCI 4550/6550 Artificial Intelligence</div>
+                                    <div class="timeline-date">Fall 2025, University of Georgia</div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-title">Graduate Teaching Assistant</div>
+                                    <div class="timeline-subtitle">CSCI 4550/6550 Artificial Intelligence</div>
+                                    <div class="timeline-date">Spring 2026, University of Georgia</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 第二行右列 - Professional Experience -->
+                    <div class="col-md-6">
+                        <div class="experience-group">
+                            <h2 class="section-title">Professional Experience</h2>
+                            <div class="timeline compact-timeline">
+                                <!-- 经历 1 -->
+                                <div class="timeline-item">
+                                    <div class="timeline-title">Founding Applied AI Scientist (Full Time)</div>
+                                    <div class="timeline-subtitle">Casium, Remote / Seattle, WA</div>
+                                    <div class="timeline-date">Dec. 2024 - Oct. 2025</div>
+                                </div>
+                                
+                                <!-- 经历 2 -->
+                                <div class="timeline-item">
+                                    <div class="timeline-title">Research Scientist (Full Time)</div>
+                                    <div class="timeline-subtitle">Hippocratic AI, Palo Alto, CA</div>
+                                    <div class="timeline-date">Sep. 2023 - Oct. 2024</div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-title">Research Affiliate</div>
+                                    <div class="timeline-subtitle">Mayo Clinic, Scottsdale, AZ</div>
+                                    <div class="timeline-date">Sep. 2022 - Sep. 2024</div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-title">Research Associate</div>
+                                    <div class="timeline-subtitle">Harvard Medical School & MGH, Boston, MA</div>
+                                    <div class="timeline-date">May. 2023 -- Sep. 2023</div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-title">Research Intern</div>
+                                    <div class="timeline-subtitle">Mayo Clinic, Scottsdale, AZ</div>
+                                    <div class="timeline-date">May. 2022 -- Sep. 2022</div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-title">Research Intern</div>
+                                    <div class="timeline-subtitle">Mayo Clinic, Scottsdale, AZ</div>
+                                    <div class="timeline-date">May. 2021 -- Sep. 2021</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 服务/审稿部分 -->
+            <section class="section-card">
+                <h2 class="section-title">Service &amp; Outreach</h2>
+                <div class="row g-4">
+                    <!-- 小节 1: Program Committee Member -->
+                    <div class="col-12">
+                        <div class="experience-group">
+                            <h3 class="subsection-title">Program Committee Member</h3>
+                            <ul class="service-list">
+                                <li class="service-item">
+                                    <span class="service-text">Artificial Intelligence in Education (AIED), 2026</span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Workshop on The Intersection of Artificial Intelligence and Human Intelligence (IAIHI) at The 16th International Conference on Brain Informatics, 2023</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                                        <!-- 小节 2: Book Reviewer -->
+                    <div class="col-12">
+                        <div class="experience-group">
+                            <h3 class="subsection-title">Book Reviewer</h3>
+                            <ul class="service-list">
+                                <li class="service-item">
+                                    <span class="service-text">Springer Nature, Large Language Models in Oncology, 2025</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 小节 3: Conference Reviewer -->
+                    <div class="col-12">
+                        <div class="experience-group">
+                            <h3 class="subsection-title">Conference Reviewer</h3>
+                            <ul class="service-list">
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://aclanthology.org/" target="_blank">Association for Computational Linguistics (ACL)</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://aied2025.itd.cnr.it/" target="_blank">International Conference on Artificial Intelligence in Education (AIED)</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://biomedicalimaging.org/" target="_blank">IEEE International Symposium on Biomedical Imaging (ISBI)</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://miccai.org/" target="_blank">Medical Image Computing and Computer Assisted Intervention (MICCAI)</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://neurips.cc/" target="_blank">Advances in Neural Information Processing Systems(NIPS)</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://icml.cc/" target="_blank">International Conference on Machine Learning (ICML)</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://2025.emnlp.org/" target="_blank">Empirical Methods in Natural Language Processing (EMNLP)</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://ieeebibm.org/" target="_blank">IEEE International Conference on Bioinformatics and Biomedicine (BIBM)</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://adma2025.github.io/" target="_blank">International Conference on Advanced Data Mining and Applications (ADMA)</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://www.mlmi.net/" target="_blank">International Workshop on Machine Learning in Medical Imaging (MLMI)</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://wi-consortium.org/conferences/bi2025/" target="_blank">International Conference on Brain Informatics (BI)</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://2025.ijcai.org/" target="_blank">International Joint Conference on Artificial Intelligence (IJCAI)</a></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- 小节 4: Journal Reviewer -->
+                    <div class="col-12">
+                        <div class="experience-group">
+                            <h3 class="subsection-title">Journal Reviewer</h3>
+                            <ul class="service-list">
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://link.springer.com/journal/10462" target="_blank">Artificial Intelligence Review</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://www.nature.com/srep/" target="_blank">Nature Scientific Reports</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://www.sciencedirect.com/journal/acta-psychologica" target="_blank">Acta Psychologica</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://journals.lww.com/aa/pages/default.aspx" target="_blank">Aging Advances</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://www.sciencedirect.com/journal/array" target="_blank">Array</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://www.sciencedirect.com/journal/computers-in-human-behavior-reports" target="_blank">Computers in Human Behavior Reports</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://www.sciencedirect.com/journal/information-fusion" target="_blank">Information Fusion</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://www.sciencedirect.com/journal/information-processing-and-management" target="_blank">Information Processing and Management (IPM)</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://link.springer.com/journal/10278" target="_blank">Journal of Imaging Informatics in Medicine</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://www.jove.com/" target="_blank">Journal of Visualized Experiments (JoVE)</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://www.sciencedirect.com/journal/patterns" target="_blank">Patterns</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://www.tandfonline.com/journals/tbit20" target="_blank">Behaviour & Information Technology</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://www.sciencedirect.com/journal/computers-and-electronics-in-agriculture" target="_blank">Computers and Electronics in Agriculture</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://www.tandfonline.com/toc/gcmb20/current" target="_blank">Computer Methods in Biomechanics and Biomedical Engineering</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=42" target="_blank">IEEE Transactions on Medical Imaging (TMI)</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://www.embs.org/rbme/" target="_blank">IEEE Reviews in Biomedical Engineering (R-BME)</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://www.tandfonline.com/toc/tgis20/current" target="_blank">International Journal of Geographical Information Science (IJGIS)</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://www.tandfonline.com/journals/hihc20" target="_blank">International Journal of Human-Computer Interaction (IJHCI)</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://www.tandfonline.com/journals/teta20" target="_blank">Journal of Experimental & Theoretical Artificial Intelligence</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://www.nature.com/commsmed" target="_blank">Nature Communications Medicine</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://www.sciencedirect.com/journal/computerized-medical-imaging-and-graphics" target="_blank">Computerized Medical Imaging and Graphics (CMIG)</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://www.sciencedirect.com/journal/computer-methods-and-programs-in-biomedicine" target="_blank">Computer Methods and Programs in Biomedicine (CMPB)</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5962385" target="_blank">IEEE Transactions on Neural Networks and Learning Systems (TNNLS)</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://www.sciencedirect.com/journal/international-journal-of-applied-earth-observation-and-geoinformation" target="_blank">International Journal of Applied Earth Observation and Geoinformation</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://www.sciencedirect.com/journal/meta-radiology" target="_blank">Meta-Radiology</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://www.sciencedirect.com/journal/engineering-applications-of-artificial-intelligence" target="_blank">Engineering Applications of Artificial Intelligence</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://www.frontiersin.org/journals/radiology" target="_blank">Frontiers in Radiology</a></span>
+                                </li>
+                                <li class="service-item">
+                                    <span class="service-text">Reviewer of <a href="https://www.sciencedirect.com/journal/softwarex" target="_blank">SoftwareX</a></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            
+            <!-- Selected Papers 部分 -->
+            <section class="section-card">
+                <h2 class="section-title">
+                    Selected Papers
+                    <span class="citation-badge">
+                        <span id="total-citations"><a href="https://scholar.google.com/citations?user=p8tAM0AAAAAJ&hl=en"  style="color: #ffffff; target="_blank">9281 citations</a></span> 
+                    </span>
+                </h2>
+                <div id="selected-papers-list">
+                    <!-- 论文 1 -->
+                    <article class="paper-card">
+                        <div class="paper-card-inner">
+                            <img src="images/Context Matters_ A Strategy to Pre_train.png" alt="Paper 1" class="paper-image-left" onerror="this.style.display='none';">
+                            <div class="paper-content">
+                                <h3 class="paper-title">Context matters: A strategy to pre-train language model for science education</h3>
+                                <p class="paper-authors">
+                                    <strong>Z. Liu</strong>, X. He, L. Liu, T. Liu, and X. Zhai
+                                    <!-- <span style="background-color: #FFF9E6; font-style: italic; border-radius: 2px; font-size: 0.85em; color: #666;">
+                                        (* equal contribution)
+                                    </span> -->
+                                </p>
+                                <p class="paper-venue">
+                                    <em>Proceedings of the International Conference on Artificial Intelligence in Education(AIED), 2023</em> <span class="conference-tag">Conference</span>
+                                </p>
+                                <p class="paper-abstract">
+                                    This study proposes a domain-specific pre-training strategy that significantly improves the automatic scoring of student science responses by continually training BERT models on specialized educational corpora (such as student answers and journal articles) to better capture the unique linguistic patterns of student scientific argumentation.
+                                </p>
+                                <div class="paper-links">
+                                    <a href="https://link.springer.com/chapter/10.1007/978-3-031-36336-8_103" class="paper-link" target="_blank">Paper</a>
+                                    <!-- <a href="#" class="paper-link" target="_blank">Code</a>  *如果有链接可以加上去，不限于code，demo什么的也可以加 -->
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- 论文 2 -->
+                    <article class="paper-card">
+                        <div class="paper-card-inner">
+                            <img src="images/Tailoring Large Language Models to Radiology_ A Preliminary Approach to LLM Adaptation for a Highly Specialized Domain.png" alt="Paper 1" class="paper-image-left" onerror="this.style.display='none';">
+                            <div class="paper-content">
+                                <h3 class="paper-title">Tailoring large language models to radiology: A preliminary approach to llm adaptation for a highly specialized domain</h3>
+                                <p class="paper-authors">
+                                    <strong>Z. Liu</strong>, A. Zhong, Y. Li, L. Yang, C. Ju, Z. Wu, C. Ma, P. Shu, C. Chen, S. Kim, H. Dai, L. Zhao, D. Zhu, J. Liu, W. Liu, D. Shen, Q. Li, T. Liu, and X. Li
+                                    <!-- <span style="background-color: #FFF9E6; font-style: italic; border-radius: 2px; font-size: 0.85em; color: #666;">
+                                        (* equal contribution)
+                                    </span> -->
+                                </p>
+                                <p class="paper-venue">
+                                    <em>Proceedings of the International Workshop on Machine Learning in Medical Imaging(MLMI), 2023</em> <span class="conference-tag">Conference</span>
+                                </p>
+                                <p class="paper-abstract">
+                                    This preliminary study demonstrates the effectiveness of instruction tuning on radiological data to create a privacy-compliant, domain-specific large language model that outperforms general-purpose models (such as StableLM and LLaMA) in specialized tasks like radiological diagnosis and report generation.
+                                </p>
+                                <div class="paper-links">
+                                    <a href="https://link.springer.com/chapter/10.1007/978-3-031-45673-2_46" class="paper-link" target="_blank">Paper</a>
+                                    <!-- <a href="#" class="paper-link" target="_blank">Code</a>  *如果有链接可以加上去，不限于code，demo什么的也可以加 -->
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 论文 3 -->
+                    <article class="paper-card">
+                        <div class="paper-card-inner">
+                            <img src="images/AgriBERT_ Knowledge_Infused Agricultural Language Models for Matching Food and Nutrition.png" alt="Paper 1" class="paper-image-left" onerror="this.style.display='none';">
+                            <div class="paper-content">
+                                <h3 class="paper-title">AgriBERT: Knowledge-Infused Agricultural Language Models for Matching Food and Nutrition</h3>
+                                <p class="paper-authors">
+                                    S. Rezayi*, <strong>Z. Liu*</strong>, Z. Wu, C. Dhakal, B. Ge, C. Zhen, T. Liu, and S. Li
+                                    <span style="background-color: #FFF9E6; font-style: italic; border-radius: 2px; font-size: 0.85em; color: #666;">
+                                        (* equal contribution)
+                                    </span>
+                                </p>
+                                <p class="paper-venue">
+                                    <em>Proceedings of the International Joint Conference on Artificial Intelligence (IJCAI), 2022</em> <span class="conference-tag">Conference</span>
+                                </p>
+                                <p class="paper-abstract">
+                                    This research presents AgriBERT, a specialized language model pre-trained on agricultural text and enhanced with knowledge infusion from food ontologies, designed to automate and significantly improve the accuracy of mapping unstructured food descriptions to standard nutritional databases.
+                                </p>
+                                <div class="paper-links">
+                                    <a href="https://www.researchgate.net/profile/Amulya-Yadav-2/publication/362052926_Forecasting_the_Number_of_Tenants_At-Risk_of_Formal_Eviction_A_Machine_Learning_Approach_to_Inform_Public_Policy/links/642eef0320f25554da139319/Forecasting-the-Number-of-Tenants-At-Risk-of-Formal-Eviction-A-Machine-Learning-Approach-to-Inform-Public-Policy.pdf" class="paper-link" target="_blank">Paper</a>
+                                    <!-- <a href="#" class="paper-link" target="_blank">Code</a>  *如果有链接可以加上去，不限于code，demo什么的也可以加 -->
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 论文 4 -->
+                    <article class="paper-card">
+                        <div class="paper-card-inner">
+                            <img src="images/Coarse_to_fine Knowledge Graph Domain Adaptation based on.png" alt="Paper 1" class="paper-image-left" onerror="this.style.display='none';">
+                            <div class="paper-content">
+                                <h3 class="paper-title">Coarse-to-fine knowledge graph domain adaptation based on distantly-supervised iterative training</h3>
+                                <p class="paper-authors">
+                                    W. Liao*, <strong>Z. Liu*</strong>, Y. Zhang, X. Huang, F. Qi, S. Ding, H. Ren, Z. Wu, H. Dai, S. Li, L. Wu, N. Liu, Q. Li, T. Liu, X. Li, and H. Cai
+                                    <span style="background-color: #FFF9E6; font-style: italic; border-radius: 2px; font-size: 0.85em; color: #666;">
+                                        (* equal contribution)
+                                    </span>
+                                </p>
+                                <p class="paper-venue">
+                                    <em>IEEE International Conference on Bioinformatics and Biomedicine (BIBM), 2023</em> <span class="conference-tag">Conference</span>
+                                </p>
+                                <p class="paper-abstract">
+                                    This paper proposes a coarse-to-fine domain adaptation framework that leverages distant supervision and an iterative training strategy to efficiently construct specialized knowledge graphs (such as for oncology) from general domain data without requiring manual annotation.
+                                </p>
+                                <div class="paper-links">
+                                    <a href="https://ieeexplore.ieee.org/abstract/document/10385649" class="paper-link" target="_blank">Paper</a>
+                                    <a href="https://www.catalyzex.com/paper/coarse-to-fine-knowledge-graph-domain/code?utm_source=catalyzex.com" class="paper-link" target="_blank">Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 论文 5 -->
+                    <article class="paper-card">
+                        <div class="paper-card-inner">
+                            <img src="images/Let’s gamble_ How a poor visualization can elicit risky behavior.png" alt="Paper 1" class="paper-image-left" onerror="this.style.display='none';">
+                            <div class="paper-content">
+                                <h3 class="paper-title">Let’s gamble: How a poor visualization can elicit risky behavior</h3>
+                                <p class="paper-authors">
+                                    M. Bancilhon*, <strong>Z. Liu*</strong>, and A. Ottley
+                                    <span style="background-color: #FFF9E6; font-style: italic; border-radius: 2px; font-size: 0.85em; color: #666;">
+                                        (* equal contribution)
+                                    </span>
+                                </p>
+                                <p class="paper-venue">
+                                    <em>IEEE Visualization Conference (VIS), 2020</em> <span class="conference-tag">Conference</span>
+                                </p>
+                                <p class="paper-abstract">
+                                    This study utilizes a large-scale gambling game to demonstrate that while icon arrays encourage economically rational decision-making, area-proportioned designs like circles and triangles significantly bias users towards risky behavior (gambling) even when it is not the optimal choice.
+                                </p>
+                                <div class="paper-links">
+                                    <a href="https://ieeexplore.ieee.org/abstract/document/9331315" class="paper-link" target="_blank">Paper</a>
+                                    <!-- <a href="#" class="paper-link" target="_blank">Code</a>  *如果有链接可以加上去，不限于code，demo什么的也可以加 -->
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 论文 6 -->
+                    <article class="paper-card">
+                        <div class="paper-card-inner">
+                            <img src="images/1-s2.0-S2950162823000176-gr2.jpg" alt="Paper 1" class="paper-image-left" onerror="this.style.display='none';">
+                            <div class="paper-content">
+                                <h3 class="paper-title">Summary of ChatGPT-related research and perspective towards the future of large language models</h3>
+                                <p class="paper-authors">
+                                    Y. Liu, T. Han, S. Ma, J. Zhang, Y. Yang, J. Tian, H. He, A. Li, M. He, <strong>Z. Liu</strong>, Z. Wu, L. Zhao, D. Zhu, X. Li, N. Qiang, D. Shen, T. Liu, and B. Ge
+                                    <!-- <span style="background-color: #FFF9E6; font-style: italic; border-radius: 2px; font-size: 0.85em; color: #666;">
+                                        (* equal contribution)
+                                    </span> -->
+                                </p>
+                                <p class="paper-venue">
+                                    <em>Meta-radiology, 2023</em> <span class="conference-tag">Journal(IF=18.26, 1504 citations)</span>
+                                </p>
+                                <p class="paper-abstract">
+                                    This paper presents a comprehensive survey of 194 ChatGPT-related studies, providing a detailed analysis of the model's technical foundations (such as RLHF), its diverse applications across domains like medicine and education, and its ethical implications, while outlining future directions for large language model development.
+                                </p>
+                                <div class="paper-links">
+                                    <a href="https://www.sciencedirect.com/science/article/pii/S2950162823000176?__cf_chl_tk=9lCFejbbUQWyubIjxmzJWn1JjTdLchNofxxpxPlsS2E-1769171863-1.0.1.1-yNlkF9aYdU5LOs2iGJwRYU4o5ZzwoRl.VZ96eqviwJA" class="paper-link" target="_blank">Paper</a>
+                                    <!-- <a href="#" class="paper-link" target="_blank">Code</a>  *如果有链接可以加上去，不限于code，demo什么的也可以加 -->
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 论文 7 -->
+                    <article class="paper-card">
+                        <div class="paper-card-inner">
+                            <img src="images/Auggpt_Leveraging chatgpt for text data augmentation.png" alt="Paper 1" class="paper-image-left" onerror="this.style.display='none';">
+                            <div class="paper-content">
+                                <h3 class="paper-title">AugGPT: Leveraging ChatGPT for text data augmentation</h3>
+                                <p class="paper-authors">
+                                    H. Dai*, <strong>Z. Liu*</strong>, W. Liao, X. Huang, Y. Cao, Z. Wu, L. Zhao, S. Xu, W. Liu, N. Liu, and T. Liu
+                                    <span style="background-color: #FFF9E6; font-style: italic; border-radius: 2px; font-size: 0.85em; color: #666;">
+                                        (* equal contribution)
+                                    </span>
+                                </p>
+                                <p class="paper-venue">
+                                    <em>IEEE Transactions on Big Data, 2024</em> <span class="conference-tag">Journal(IF=5.7)</span>
+                                </p>
+                                <p class="paper-abstract">
+                                    This paper introduces AugGPT, a data augmentation framework that utilizes ChatGPT to rephrase original training data into semantically consistent but stylistically diverse samples, significantly boosting model performance and robustness in few-shot text classification tasks.
+                                </p>
+                                <div class="paper-links">
+                                    <a href="https://ieeexplore.ieee.org/abstract/document/10858342/" class="paper-link" target="_blank">Paper</a>
+                                    <!-- <a href="#" class="paper-link" target="_blank">Code</a>  *如果有链接可以加上去，不限于code，demo什么的也可以加 -->
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 论文 8 -->
+                    <article class="paper-card">
+                        <div class="paper-card-inner">
+                            <img src="images/Radiology_GPT_ A Large Language Model for Radiology.png" alt="Paper 1" class="paper-image-left" onerror="this.style.display='none';">
+                            <div class="paper-content">
+                                <h3 class="paper-title">Radiology-GPT: a large language model for radiology</h3>
+                                <p class="paper-authors">
+                                    <strong>Z. Liu</strong>, Y. Li, P. Shu, A. Zhong, H. Jiang, Y. Pan, L. Yang, C. Ju, Z. Wu, C. Ma, C. Chen, S. Kim, H. Dai, L. Zhao, L. Sun, D. Zhu, J. Liu, W. Liu, D. Shen, Q. Li, T. Liu, and X. Li
+                                    <!-- <span style="background-color: #FFF9E6; font-style: italic; border-radius: 2px; font-size: 0.85em; color: #666;">
+                                        (* equal contribution)
+                                    </span> -->
+                                </p>
+                                <p class="paper-venue">
+                                    <em>Meta-Radiology, 2025</em> <span class="conference-tag">Journal(IF=18.26)</span>
+                                </p>
+                                <p class="paper-abstract">
+                                    This paper presents Radiology-GPT, a domain-specific large language model developed via instruction tuning on radiology reports, which achieves superior performance in diagnostic reasoning and report generation compared to general-purpose models while ensuring data privacy for clinical deployment.
+                                </p>
+                                <div class="paper-links">
+                                    <a href="https://www.sciencedirect.com/science/article/pii/S2950162825000219" class="paper-link" target="_blank">Paper</a>
+                                    <!-- <a href="#" class="paper-link" target="_blank">Code</a>  *如果有链接可以加上去，不限于code，demo什么的也可以加 -->
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 论文 9 -->
+                    <article class="paper-card">
+                        <div class="paper-card-inner">
+                            <img src="images/A generalist vision_language foundation model for diverse biomedical tasks.png" alt="Paper 1" class="paper-image-left" onerror="this.style.display='none';">
+                            <div class="paper-content">
+                                <h3 class="paper-title">A generalist vision–language foundation model for diverse biomedical tasks</h3>
+                                <p class="paper-authors">
+                                    C. Yan, J. Bi, Y. Luo, Y. Ma, <strong>Z. Liu</strong>, Z. Wu, L. Zhao, S. Xu, L. Wei, S. Huang, H. Wang, Y. Pan, B. Liao, Y. Huang, J. Xia, M. He, Z. Wang, Z. Lin, C. Slaughter, H. Zhu, Y. Zhang, Q. Qu, X. Zhang, G. Li, S. Ju, J. Huang, S. S. Zhang, D. Zhou, R. J. Fu, L. Sun, P. S. Yu, W. Liu, J. Gao, X. Li, D. Zhu, T. Liu, and D. Shen
+                                    <!-- <span style="background-color: #FFF9E6; font-style: italic; border-radius: 2px; font-size: 0.85em; color: #666;">
+                                        (* equal contribution)
+                                    </span> -->
+                                </p>
+                                <p class="paper-venue">
+                                    <em>Nature Medicine, 2024</em> <span class="conference-tag">Journal(IF=50.0)</span>
+                                </p>
+                                <p class="paper-abstract">
+                                    This study introduces BiomedGPT, a unified and open-source foundation model pre-trained on diverse multi-modal biomedical data (including 2D/3D images and text), which demonstrates that a single generalist model can effectively transfer knowledge across varying domains to perform a wide range of tasks such as image classification, captioning, and visual question answering.
+                                </p>
+                                <div class="paper-links">
+                                    <a href="https://www.nature.com/articles/s41591-024-03185-2" class="paper-link" target="_blank">Paper</a>
+                                    <!-- <a href="#" class="paper-link" target="_blank">Code</a>  *如果有链接可以加上去，不限于code，demo什么的也可以加 -->
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 论文 10 -->
+                    <article class="paper-card">
+                        <div class="paper-card-inner">
+                            <img src="images/Structure mapping generative adversarial network for multi_view information mapping pattern mining.png" alt="Paper 1" class="paper-image-left" onerror="this.style.display='none';">
+                            <div class="paper-content">
+                                <h3 class="paper-title">Structure mapping generative adversarial network for multi-view information mapping pattern mining</h3>
+                                <p class="paper-authors">
+                                    X. A. Bi, Y. Huang, Z. Yang, K. Chen, Z. Xing, L. Xu, X. Li, <strong>Z. Liu</strong>, and T. Liu
+                                    <!-- <span style="background-color: #FFF9E6; font-style: italic; border-radius: 2px; font-size: 0.85em; color: #666;">
+                                        (* equal contribution)
+                                    </span> -->
+                                </p>
+                                <p class="paper-venue">
+                                    <em>IEEE Transactions on Pattern Analysis and Machine Intelligence, 2023</em> <span class="conference-tag">Journal(IF=21.9)</span>
+                                </p>
+                                <p class="paper-abstract">
+                                    This paper proposes a Structure Mapping Generative Adversarial Network (SM-GAN), a framework that models the hierarchical interactions between different data views as a structural mapping process from micro- to macro-networks, effectively capturing common patterns to improve performance in multi-view learning tasks such as classification and evolution prediction.
+                                </p>
+                                <div class="paper-links">
+                                    <a href="https://www.sciencedirect.com/science/article/pii/S2950162825000219" class="paper-link" target="_blank">Paper</a>
+                                    <!-- <a href="#" class="paper-link" target="_blank">Code</a>  *如果有链接可以加上去，不限于code，demo什么的也可以加 -->
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+                <div class="text-center mt-3">
+                    <a href="publications.html" class="publication-link secondary">View All Publications →</a>
+                </div>
+            </section>
+            
+            <!-- 新闻动态部分（可选） -->
+            <!-- <section class="section-card">
+                <h2 class="section-title">News</h2>
+                <div class="timeline"> -->
+                    <!-- TODO: 添加/修改新闻动态 -->
+                    <!-- <div class="timeline-item">
+                        <div class="timeline-date">Mon. YYYY</div>
+                        <div class="timeline-description">
+                            News description about your achievements, papers, etc.
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Mon. YYYY</div>
+                        <div class="timeline-description">
+                            Another news item
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+        </div>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="text-center py-4" style="position:relative; z-index:10; color:var(--text-muted); font-size:0.85rem;">
+        <div class="container">
+            <!-- TODO: 修改版权信息 -->
+            <p class="mb-0">Copyright© 2026 <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=p8tAM0AAAAAJ" class="paper-link" target="_blank">Zhengliang Liu</a>. All Rights Reserved.</p>
+        </div>
     </footer>
-
-    <script src="script.js"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- 自定义JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 </html>
-
-
-
-
-

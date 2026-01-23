@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Publications - Academic Personal Homepage">
+    <title>Publications - Academic Personal Homepage</title>
+    
+    <!-- 字体 - 使用 Inter 字体增加高级感 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 动态背景特效 - 参考原网站 https://hq0709.github.io/ -->
+    <div class="background-container">
+        <div class="color-bands">
+            <div class="color-band"></div>
+            <div class="color-band"></div>
+            <div class="color-band"></div>
+            <div class="color-band"></div>
+            <div class="floating-orb"></div>
+            <div class="floating-orb"></div>
+            <div class="floating-orb"></div>
+        </div>
+    </div>
+    <div class="background-overlay"></div>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg">
+        <!-- 导航栏内部容器：与中间内容区域宽度对齐 -->
+        <div class="nav-container">
+            <!-- TODO: 修改网站名称/个人姓名 -->
+            <a class="navbar-brand" href="index.html">Academic Homepage</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- TODO: 修改导航链接的href指向实际页面 -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="publications.html">Publications</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <div class="container">
+            <h1 class="mb-3" style="text-align:center; font-weight:700;">Publications</h1>
+            
+            <!-- 提醒 -->
+            <div class="publications-notice">
+                <span class="quote-mark">"</span>
+                All papers that have not been peer-reviewed will not appear here, including preprints. 
+                You can access my all of papers at my 🔗
+                <a href="https://scholar.google.com/citations?user=p8tAM0AAAAAJ&hl=en" class="scholar-link" target="_blank">
+                    Google Scholar
+                </a>.
+                <span class="quote-mark">"</span>
+            </div>
+            
+            <!-- 论文列表 -->
+            <div id="publications-list">
+                <!-- TODO: 添加/修改论文信息 -->
+                <!-- 每篇论文的结构如下： -->
+                
+                                    <!-- 论文 1 -->
+                    <article class="paper-card">
+                        <div class="paper-card-inner">
+                            <img src="images/Context Matters_ A Strategy to Pre_train.png" alt="Paper 1" class="paper-image-left" onerror="this.style.display='none';">
+                            <div class="paper-content">
+                                <h3 class="paper-title">Context matters: A strategy to pre-train language model for science education</h3>
+                                <!-- <span class="paper-note">Accept. rate: 25.3%</span> -->
+                                <p class="paper-authors">
+                                    <strong>Z. Liu</strong>, X. He, L. Liu, T. Liu, and X. Zhai
+                                    <!-- <span style="background-color: #FFF9E6; font-style: italic; border-radius: 2px; font-size: 0.85em; color: #666;">
+                                        (* equal contribution)
+                                    </span> -->
+                                </p>
+                                <p class="paper-venue">
+                                    <em>Proceedings of the International Conference on Artificial Intelligence in Education(AIED), 2023</em> <span class="conference-tag">Conference</span>
+                                </p>
+                                <p class="paper-abstract">
+                                    This study proposes a domain-specific pre-training strategy that significantly improves the automatic scoring of student science responses by continually training BERT models on specialized educational corpora (such as student answers and journal articles) to better capture the unique linguistic patterns of student scientific argumentation.
+                                </p>
+                                <div class="paper-links">
+                                    <a href="https://link.springer.com/chapter/10.1007/978-3-031-36336-8_103" class="paper-link" target="_blank">Paper</a>
+                                    <!-- <a href="#" class="paper-link" target="_blank">Code</a>  *如果有链接可以加上去，不限于code，demo什么的也可以加 -->
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- 论文 2 -->
+                    <article class="paper-card">
+                        <div class="paper-card-inner">
+                            <img src="images/Tailoring Large Language Models to Radiology_ A Preliminary Approach to LLM Adaptation for a Highly Specialized Domain.png" alt="Paper 1" class="paper-image-left" onerror="this.style.display='none';">
+                            <div class="paper-content">
+                                <h3 class="paper-title">Tailoring large language models to radiology: A preliminary approach to llm adaptation for a highly specialized domain</h3>
+                                <p class="paper-authors">
+                                    <strong>Z. Liu</strong>, A. Zhong, Y. Li, L. Yang, C. Ju, Z. Wu, C. Ma, P. Shu, C. Chen, S. Kim, H. Dai, L. Zhao, D. Zhu, J. Liu, W. Liu, D. Shen, Q. Li, T. Liu, and X. Li
+                                    <!-- <span style="background-color: #FFF9E6; font-style: italic; border-radius: 2px; font-size: 0.85em; color: #666;">
+                                        (* equal contribution)
+                                    </span> -->
+                                </p>
+                                <p class="paper-venue">
+                                    <em>Proceedings of the International Workshop on Machine Learning in Medical Imaging(MLMI), 2023</em> <span class="conference-tag">Conference</span>
+                                </p>
+                                <p class="paper-abstract">
+                                    This preliminary study demonstrates the effectiveness of instruction tuning on radiological data to create a privacy-compliant, domain-specific large language model that outperforms general-purpose models (such as StableLM and LLaMA) in specialized tasks like radiological diagnosis and report generation.
+                                </p>
+                                <div class="paper-links">
+                                    <a href="https://link.springer.com/chapter/10.1007/978-3-031-45673-2_46" class="paper-link" target="_blank">Paper</a>
+                                    <!-- <a href="#" class="paper-link" target="_blank">Code</a>  *如果有链接可以加上去，不限于code，demo什么的也可以加 -->
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 论文 3 -->
+                    <article class="paper-card">
+                        <div class="paper-card-inner">
+                            <img src="images/AgriBERT_ Knowledge_Infused Agricultural Language Models for Matching Food and Nutrition.png" alt="Paper 1" class="paper-image-left" onerror="this.style.display='none';">
+                            <div class="paper-content">
+                                <h3 class="paper-title">AgriBERT: Knowledge-Infused Agricultural Language Models for Matching Food and Nutrition</h3>
+                                <p class="paper-authors">
+                                    S. Rezayi*, <strong>Z. Liu*</strong>, Z. Wu, C. Dhakal, B. Ge, C. Zhen, T. Liu, and S. Li
+                                    <span style="background-color: #FFF9E6; font-style: italic; border-radius: 2px; font-size: 0.85em; color: #666;">
+                                        (* equal contribution)
+                                    </span>
+                                </p>
+                                <p class="paper-venue">
+                                    <em>Proceedings of the International Joint Conference on Artificial Intelligence (IJCAI), 2022</em> <span class="conference-tag">Conference</span>
+                                </p>
+                                <p class="paper-abstract">
+                                    This research presents AgriBERT, a specialized language model pre-trained on agricultural text and enhanced with knowledge infusion from food ontologies, designed to automate and significantly improve the accuracy of mapping unstructured food descriptions to standard nutritional databases.
+                                </p>
+                                <div class="paper-links">
+                                    <a href="https://www.researchgate.net/profile/Amulya-Yadav-2/publication/362052926_Forecasting_the_Number_of_Tenants_At-Risk_of_Formal_Eviction_A_Machine_Learning_Approach_to_Inform_Public_Policy/links/642eef0320f25554da139319/Forecasting-the-Number-of-Tenants-At-Risk-of-Formal-Eviction-A-Machine-Learning-Approach-to-Inform-Public-Policy.pdf" class="paper-link" target="_blank">Paper</a>
+                                    <!-- <a href="#" class="paper-link" target="_blank">Code</a>  *如果有链接可以加上去，不限于code，demo什么的也可以加 -->
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 论文 4 -->
+                    <article class="paper-card">
+                        <div class="paper-card-inner">
+                            <img src="images/Coarse_to_fine Knowledge Graph Domain Adaptation based on.png" alt="Paper 1" class="paper-image-left" onerror="this.style.display='none';">
+                            <div class="paper-content">
+                                <h3 class="paper-title">Coarse-to-fine knowledge graph domain adaptation based on distantly-supervised iterative training</h3>
+                                <p class="paper-authors">
+                                    W. Liao*, <strong>Z. Liu*</strong>, Y. Zhang, X. Huang, F. Qi, S. Ding, H. Ren, Z. Wu, H. Dai, S. Li, L. Wu, N. Liu, Q. Li, T. Liu, X. Li, and H. Cai
+                                    <span style="background-color: #FFF9E6; font-style: italic; border-radius: 2px; font-size: 0.85em; color: #666;">
+                                        (* equal contribution)
+                                    </span>
+                                </p>
+                                <p class="paper-venue">
+                                    <em>IEEE International Conference on Bioinformatics and Biomedicine (BIBM), 2023</em> <span class="conference-tag">Conference</span>
+                                </p>
+                                <p class="paper-abstract">
+                                    This paper proposes a coarse-to-fine domain adaptation framework that leverages distant supervision and an iterative training strategy to efficiently construct specialized knowledge graphs (such as for oncology) from general domain data without requiring manual annotation.
+                                </p>
+                                <div class="paper-links">
+                                    <a href="https://ieeexplore.ieee.org/abstract/document/10385649" class="paper-link" target="_blank">Paper</a>
+                                    <a href="https://www.catalyzex.com/paper/coarse-to-fine-knowledge-graph-domain/code?utm_source=catalyzex.com" class="paper-link" target="_blank">Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 论文 5 -->
+                    <article class="paper-card">
+                        <div class="paper-card-inner">
+                            <img src="images/Let’s gamble_ How a poor visualization can elicit risky behavior.png" alt="Paper 1" class="paper-image-left" onerror="this.style.display='none';">
+                            <div class="paper-content">
+                                <h3 class="paper-title">Let’s gamble: How a poor visualization can elicit risky behavior</h3>
+                                <p class="paper-authors">
+                                    M. Bancilhon*, <strong>Z. Liu*</strong>, and A. Ottley
+                                    <span style="background-color: #FFF9E6; font-style: italic; border-radius: 2px; font-size: 0.85em; color: #666;">
+                                        (* equal contribution)
+                                    </span>
+                                </p>
+                                <p class="paper-venue">
+                                    <em>IEEE Visualization Conference (VIS), 2020</em> <span class="conference-tag">Conference</span>
+                                </p>
+                                <p class="paper-abstract">
+                                    This study utilizes a large-scale gambling game to demonstrate that while icon arrays encourage economically rational decision-making, area-proportioned designs like circles and triangles significantly bias users towards risky behavior (gambling) even when it is not the optimal choice.
+                                </p>
+                                <div class="paper-links">
+                                    <a href="https://ieeexplore.ieee.org/abstract/document/9331315" class="paper-link" target="_blank">Paper</a>
+                                    <!-- <a href="#" class="paper-link" target="_blank">Code</a>  *如果有链接可以加上去，不限于code，demo什么的也可以加 -->
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 论文 6 -->
+                    <article class="paper-card">
+                        <div class="paper-card-inner">
+                            <img src="images/1-s2.0-S2950162823000176-gr2.jpg" alt="Paper 1" class="paper-image-left" onerror="this.style.display='none';">
+                            <div class="paper-content">
+                                <h3 class="paper-title">Summary of ChatGPT-related research and perspective towards the future of large language models</h3>
+                                <p class="paper-authors">
+                                    Y. Liu, T. Han, S. Ma, J. Zhang, Y. Yang, J. Tian, H. He, A. Li, M. He, <strong>Z. Liu</strong>, Z. Wu, L. Zhao, D. Zhu, X. Li, N. Qiang, D. Shen, T. Liu, and B. Ge
+                                    <!-- <span style="background-color: #FFF9E6; font-style: italic; border-radius: 2px; font-size: 0.85em; color: #666;">
+                                        (* equal contribution)
+                                    </span> -->
+                                </p>
+                                <p class="paper-venue">
+                                    <em>Meta-radiology, 2023</em> <span class="conference-tag">Journal(IF=18.26, 1504 citations)</span>
+                                </p>
+                                <p class="paper-abstract">
+                                    This paper presents a comprehensive survey of 194 ChatGPT-related studies, providing a detailed analysis of the model's technical foundations (such as RLHF), its diverse applications across domains like medicine and education, and its ethical implications, while outlining future directions for large language model development.
+                                </p>
+                                <div class="paper-links">
+                                    <a href="https://www.sciencedirect.com/science/article/pii/S2950162823000176?__cf_chl_tk=9lCFejbbUQWyubIjxmzJWn1JjTdLchNofxxpxPlsS2E-1769171863-1.0.1.1-yNlkF9aYdU5LOs2iGJwRYU4o5ZzwoRl.VZ96eqviwJA" class="paper-link" target="_blank">Paper</a>
+                                    <!-- <a href="#" class="paper-link" target="_blank">Code</a>  *如果有链接可以加上去，不限于code，demo什么的也可以加 -->
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 论文 7 -->
+                    <article class="paper-card">
+                        <div class="paper-card-inner">
+                            <img src="images/Auggpt_Leveraging chatgpt for text data augmentation.png" alt="Paper 1" class="paper-image-left" onerror="this.style.display='none';">
+                            <div class="paper-content">
+                                <h3 class="paper-title">AugGPT: Leveraging ChatGPT for text data augmentation</h3>
+                                <p class="paper-authors">
+                                    H. Dai*, <strong>Z. Liu*</strong>, W. Liao, X. Huang, Y. Cao, Z. Wu, L. Zhao, S. Xu, W. Liu, N. Liu, and T. Liu
+                                    <span style="background-color: #FFF9E6; font-style: italic; border-radius: 2px; font-size: 0.85em; color: #666;">
+                                        (* equal contribution)
+                                    </span>
+                                </p>
+                                <p class="paper-venue">
+                                    <em>IEEE Transactions on Big Data, 2024</em> <span class="conference-tag">Journal(IF=5.7)</span>
+                                </p>
+                                <p class="paper-abstract">
+                                    This paper introduces AugGPT, a data augmentation framework that utilizes ChatGPT to rephrase original training data into semantically consistent but stylistically diverse samples, significantly boosting model performance and robustness in few-shot text classification tasks.
+                                </p>
+                                <div class="paper-links">
+                                    <a href="https://ieeexplore.ieee.org/abstract/document/10858342/" class="paper-link" target="_blank">Paper</a>
+                                    <!-- <a href="#" class="paper-link" target="_blank">Code</a>  *如果有链接可以加上去，不限于code，demo什么的也可以加 -->
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 论文 8 -->
+                    <article class="paper-card">
+                        <div class="paper-card-inner">
+                            <img src="images/Radiology_GPT_ A Large Language Model for Radiology.png" alt="Paper 1" class="paper-image-left" onerror="this.style.display='none';">
+                            <div class="paper-content">
+                                <h3 class="paper-title">Radiology-GPT: a large language model for radiology</h3>
+                                <p class="paper-authors">
+                                    <strong>Z. Liu</strong>, Y. Li, P. Shu, A. Zhong, H. Jiang, Y. Pan, L. Yang, C. Ju, Z. Wu, C. Ma, C. Chen, S. Kim, H. Dai, L. Zhao, L. Sun, D. Zhu, J. Liu, W. Liu, D. Shen, Q. Li, T. Liu, and X. Li
+                                    <!-- <span style="background-color: #FFF9E6; font-style: italic; border-radius: 2px; font-size: 0.85em; color: #666;">
+                                        (* equal contribution)
+                                    </span> -->
+                                </p>
+                                <p class="paper-venue">
+                                    <em>Meta-Radiology, 2025</em> <span class="conference-tag">Journal(IF=18.26)</span>
+                                </p>
+                                <p class="paper-abstract">
+                                    This paper presents Radiology-GPT, a domain-specific large language model developed via instruction tuning on radiology reports, which achieves superior performance in diagnostic reasoning and report generation compared to general-purpose models while ensuring data privacy for clinical deployment.
+                                </p>
+                                <div class="paper-links">
+                                    <a href="https://www.sciencedirect.com/science/article/pii/S2950162825000219" class="paper-link" target="_blank">Paper</a>
+                                    <!-- <a href="#" class="paper-link" target="_blank">Code</a>  *如果有链接可以加上去，不限于code，demo什么的也可以加 -->
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 论文 9 -->
+                    <article class="paper-card">
+                        <div class="paper-card-inner">
+                            <img src="images/A generalist vision_language foundation model for diverse biomedical tasks.png" alt="Paper 1" class="paper-image-left" onerror="this.style.display='none';">
+                            <div class="paper-content">
+                                <h3 class="paper-title">A generalist vision–language foundation model for diverse biomedical tasks</h3>
+                                <p class="paper-authors">
+                                    C. Yan, J. Bi, Y. Luo, Y. Ma, <strong>Z. Liu</strong>, Z. Wu, L. Zhao, S. Xu, L. Wei, S. Huang, H. Wang, Y. Pan, B. Liao, Y. Huang, J. Xia, M. He, Z. Wang, Z. Lin, C. Slaughter, H. Zhu, Y. Zhang, Q. Qu, X. Zhang, G. Li, S. Ju, J. Huang, S. S. Zhang, D. Zhou, R. J. Fu, L. Sun, P. S. Yu, W. Liu, J. Gao, X. Li, D. Zhu, T. Liu, and D. Shen
+                                    <!-- <span style="background-color: #FFF9E6; font-style: italic; border-radius: 2px; font-size: 0.85em; color: #666;">
+                                        (* equal contribution)
+                                    </span> -->
+                                </p>
+                                <p class="paper-venue">
+                                    <em>Nature Medicine, 2024</em> <span class="conference-tag">Journal(IF=50.0)</span>
+                                </p>
+                                <p class="paper-abstract">
+                                    This study introduces BiomedGPT, a unified and open-source foundation model pre-trained on diverse multi-modal biomedical data (including 2D/3D images and text), which demonstrates that a single generalist model can effectively transfer knowledge across varying domains to perform a wide range of tasks such as image classification, captioning, and visual question answering.
+                                </p>
+                                <div class="paper-links">
+                                    <a href="https://www.nature.com/articles/s41591-024-03185-2" class="paper-link" target="_blank">Paper</a>
+                                    <!-- <a href="#" class="paper-link" target="_blank">Code</a>  *如果有链接可以加上去，不限于code，demo什么的也可以加 -->
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 论文 10 -->
+                    <article class="paper-card">
+                        <div class="paper-card-inner">
+                            <img src="images/Structure mapping generative adversarial network for multi_view information mapping pattern mining.png" alt="Paper 1" class="paper-image-left" onerror="this.style.display='none';">
+                            <div class="paper-content">
+                                <h3 class="paper-title">Structure mapping generative adversarial network for multi-view information mapping pattern mining</h3>
+                                <p class="paper-authors">
+                                    X. A. Bi, Y. Huang, Z. Yang, K. Chen, Z. Xing, L. Xu, X. Li, <strong>Z. Liu</strong>, and T. Liu
+                                    <!-- <span style="background-color: #FFF9E6; font-style: italic; border-radius: 2px; font-size: 0.85em; color: #666;">
+                                        (* equal contribution)
+                                    </span> -->
+                                </p>
+                                <p class="paper-venue">
+                                    <em>IEEE Transactions on Pattern Analysis and Machine Intelligence, 2023</em> <span class="conference-tag">Journal(IF=21.9)</span>
+                                </p>
+                                <p class="paper-abstract">
+                                    This paper proposes a Structure Mapping Generative Adversarial Network (SM-GAN), a framework that models the hierarchical interactions between different data views as a structural mapping process from micro- to macro-networks, effectively capturing common patterns to improve performance in multi-view learning tasks such as classification and evolution prediction.
+                                </p>
+                                <div class="paper-links">
+                                    <a href="https://www.sciencedirect.com/science/article/pii/S2950162825000219" class="paper-link" target="_blank">Paper</a>
+                                    <!-- <a href="#" class="paper-link" target="_blank">Code</a>  *如果有链接可以加上去，不限于code，demo什么的也可以加 -->
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                
+                <!-- 可以继续添加更多论文 -->
+            </div>
+            
+            <!-- 提示信息 -->
+            <div class="text-center mt-4" style="color: var(--text-muted); font-size: 0.9rem;">
+                <p>Last updated: <span id="update-date"></span></p>
+            </div>
+        </div>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="text-center py-4" style="position:relative; z-index:10; color:var(--text-muted); font-size:0.85rem;">
+        <div class="container">
+            <!-- TODO: 修改版权信息 -->
+            <p class="mb-0">Copyright© 2026 <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=p8tAM0AAAAAJ" class="paper-link" target="_blank">Zhengliang Liu</a>. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- 自定义JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <script>
+        // 自动更新日期
+        document.getElementById('update-date').textContent = new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+    </script>
+</body>
+</html>

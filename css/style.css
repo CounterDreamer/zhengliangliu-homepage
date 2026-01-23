@@ -1,0 +1,1447 @@
+/* 
+ * 主样式文件 - Academic Personal Homepage (高级版)
+ * 作者: AI Assistant
+ * 日期: 2026-01-23
+ * 
+ * 新增高级特效：
+ * - 玻璃拟态效果 (Glassmorphism)
+ * - 粒子动画背景
+ * - 渐变文字效果
+ * - 平滑滚动和悬停动画
+ */
+
+/* ==================== 可更改的配置区域 ==================== */
+
+/* 
+ * 1. 主体颜色配置
+ * 在此处修改网站的颜色主题
+ */
+ :root {
+    /* 主色调 - 可以更改为任意颜色值 */
+    --primary-color: #667eea;           /* 主要链接和强调色 - 紫蓝色 */
+    --primary-dark: #5a67d8;            /* 深色版本 */
+    --accent-color: #f093fb;            /* 强调元素颜色 - 粉紫色 */
+    --background-color: #f7fafc;        /* 页面背景色 */
+    
+    /* 文字颜色 */
+    --text-primary: #1a202c;            /* 主要文字颜色 */
+    --text-secondary: #4a5568;          /* 次要文字颜色 */
+    --text-muted: #718096;              /* 较浅的文字颜色 */
+    
+    /* 链接颜色 */
+    --link-color: #667eea;              /* 链接文字颜色 */
+    --link-hover-color: #5a67d8;        /* 链接悬停颜色 */
+    
+    /* 玻璃拟态效果颜色 */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+    
+    /* 渐变文字颜色 */
+    --gradient-text: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    
+    /* 粒子颜色 */
+    --particle-color-1: rgba(102, 126, 234, 0.4);
+    --particle-color-2: rgba(118, 75, 162, 0.4);
+    --particle-color-3: rgba(240, 147, 251, 0.4);
+}
+
+/* ==================== 背景特效样式 ==================== */
+
+/* 
+ * 背景特效 - 参考原网站 https://hq0709.github.io/
+ * 白色背景 + 动态彩色渐变带
+ */
+
+/* 背景容器 */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+/* 动态彩色带 */
+.color-bands {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.color-band {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    opacity: 0.85;
+    animation: colorBandMove 20s ease-in-out infinite alternate;
+}
+
+.color-band:nth-child(1) {
+    bottom: 0;
+    background: linear-gradient(to right, #ff6b6b, #ffa502, #fffa65);
+    animation-delay: 0s;
+}
+
+.color-band:nth-child(2) {
+    bottom: 20%;
+    background: linear-gradient(to right, #70a1ff, #5352ed, #a55eea);
+    animation-delay: -5s;
+    opacity: 0.7;
+}
+
+.color-band:nth-child(3) {
+    bottom: 40%;
+    background: linear-gradient(to right, #2ed573, #7bed9f, #7bed9f);
+    animation-delay: -10s;
+    opacity: 0.6;
+}
+
+.color-band:nth-child(4) {
+    bottom: 60%;
+    background: linear-gradient(to right, #ff6b6b, #ff4757, #ff6348);
+    animation-delay: -15s;
+    opacity: 0.5;
+}
+
+@keyframes colorBandMove {
+    0% {
+        transform: translateX(-5%) skewY(-2deg);
+    }
+    100% {
+        transform: translateX(5%) skewY(2deg);
+    }
+}
+
+/* 浮动彩色球装饰 */
+.floating-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.4;
+    animation: floatOrb 25s ease-in-out infinite;
+}
+
+.floating-orb:nth-child(5) {
+    width: 400px;
+    height: 400px;
+    background: #ff6b6b;
+    top: -100px;
+    left: -100px;
+    animation-delay: 0s;
+}
+
+.floating-orb:nth-child(6) {
+    width: 300px;
+    height: 300px;
+    background: #70a1ff;
+    top: 50%;
+    right: -50px;
+    animation-delay: -8s;
+}
+
+.floating-orb:nth-child(7) {
+    width: 350px;
+    height: 350px;
+    background: #2ed573;
+    bottom: -100px;
+    left: 30%;
+    animation-delay: -16s;
+}
+
+@keyframes floatOrb {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    25% {
+        transform: translate(30px, -30px) scale(1.1);
+    }
+    50% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+    75% {
+        transform: translate(20px, 10px) scale(1.05);
+    }
+}
+
+/* 白色遮罩层 */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+/* 粒子动画 - 隐藏，因为现在使用彩色带效果 */
+.particles {
+    display: none;
+}
+
+/* ==================== 基础样式 ==================== */
+
+/* 平滑滚动优化 */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+    scroll-behavior: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    font-family: "Inter", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    font-size: 13.5px;
+    line-height: 1.4;
+    color: var(--text-primary);
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* 增加顶部 padding 避免被固定导航栏遮挡 */
+    padding-top: 50px;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+/* ==================== 导航栏样式 ==================== */
+
+/* 导航栏 - 更小巧紧凑 */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0.6rem 0;
+    transition: all 0.3s ease;
+    /* 导航栏内部容器：与中间内容区域宽度对齐 */
+}
+
+.navbar.scrolled {
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* 导航栏内部容器：与主要内容宽度对齐 */
+.nav-container {
+    max-width: 1000px;  /* 与中间内容区域的宽度一致 */
+    margin: 0 auto;      /* 居中显示 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;     /* 防止在窄屏上文字紧贴边缘 */
+    width: 100%;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--text-primary) !important;
+    letter-spacing: -0.02em;
+}
+
+.nav-link {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text-secondary) !important;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.4rem 0.75rem !important;
+    margin: 0 0.15rem;
+    border-radius: 6px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-text);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 60%;
+}
+
+/* ==================== 主要内容区域样式 ==================== */
+
+.main-content {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+/* ==================== 首页样式 ==================== */
+
+/* 个人资料卡片 - 玻璃拟态效果 */
+.profile-section {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 1.5rem 1.25rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--glass-shadow);
+    /* 页面加载动画 - 更快的0.2s */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.25s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* 页面加载动画 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.15);
+}
+
+/* 头像样式 */
+.profile-avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.25rem;
+    background-color: #e2e8f0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid white;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+.profile-avatar:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.25);
+}
+
+/* 姓名样式 - 渐变文字 */
+.profile-name {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 0.35rem;
+    text-align: center;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+}
+
+/* 职位/机构样式 */
+.profile-position {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 0.15rem;
+    line-height: 1.4;
+}
+
+.profile-position a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.profile-position a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--link-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.profile-position a:hover {
+    color: var(--link-hover-color);
+}
+
+.profile-position a:hover::after {
+    transform: scaleX(1);
+}
+
+/* 研究方向样式 */
+.profile-bio {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin: 0.75rem 0;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* 邮箱样式 */
+.email-text {
+    font-family: "SF Mono", "Fira Code", "Courier New", Courier, monospace;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+}
+
+/* 社交媒体链接样式 */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.social-link:hover {
+    background: var(--primary-color);
+    color: white !important;
+    border-color: var(--primary-color);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.35);
+}
+
+.social-link img {
+    width: 18px;
+    height: 18px;
+    margin-right: 0.5rem;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.social-link:hover img {
+    filter: grayscale(0%);
+}
+
+/* ==================== 教育经历等部分样式 ==================== */
+
+/* 玻璃拟态卡片 */
+.section-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--glass-shadow);
+    /* 滚动淡入动画 */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.4s ease;
+    will-change: opacity, transform;
+}
+
+/* 卡片进入视口后的动画状态 */
+.section-card.fade-in-visible,
+.paper-card.fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(31, 38, 135, 0.12);
+}
+
+/* 标题样式 */
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid rgba(102, 126, 234, 0.2);
+    color: var(--text-primary);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--gradient-text);
+}
+
+/* 时间线样式 */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--primary-color), transparent);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    padding-left: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+    padding-left: 1rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2rem;
+    top: 0.25rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--gradient-text);
+    transform: translateX(-5px);
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover::before {
+    transform: translateX(-5px) scale(1.2);
+    box-shadow: 0 0 0 6px rgba(102, 126, 234, 0.3);
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.timeline-date {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 0.2rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.timeline-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.15rem;
+    letter-spacing: -0.01em;
+}
+
+.timeline-subtitle {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+}
+
+.timeline-description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.timeline-description ul {
+    margin: 0.5rem 0;
+    padding-left: 1.25rem;
+}
+
+.timeline-description li {
+    margin-bottom: 0.25rem;
+}
+
+/* 奖励样式 */
+.award-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.award-item:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: translateX(4px);
+}
+
+.award-icon {
+    font-size: 1.35rem;
+    margin-right: 1rem;
+    min-width: 32px;
+    text-align: center;
+}
+
+.award-content {
+    flex: 1;
+}
+
+.award-title {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.15rem;
+    font-size: 0.95rem;
+}
+
+.award-description {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* 服务/审稿部分 */
+.service-list {
+    list-style: none;
+    padding: 0;
+}
+
+.service-item {
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.service-item:hover {
+    background: rgba(102, 126, 234, 0.1);
+    border-color: var(--primary-color);
+    transform: translateX(4px);
+}
+
+.service-item::before {
+    content: '✦';
+    margin-right: 0.75rem;
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.service-text {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* 小节标题样式 */
+.subsection-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1.5px solid rgba(102, 126, 234, 0.2);
+    color: var(--text-primary);
+    position: relative;
+}
+
+.subsection-title::after {
+    content: '';
+    position: absolute;
+    bottom: -1.5px;
+    left: 0;
+    width: 35px;
+    height: 1.5px;
+    background: var(--gradient-text);
+}
+
+/* ==================== 论文页面样式 ==================== */
+
+.publication-item {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+    box-shadow: var(--glass-shadow);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.publication-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(31, 38, 135, 0.12);
+}
+
+.publication-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.6rem;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    transition: all 0.3s ease;
+}
+
+.publication-item:hover .publication-title {
+    color: var(--primary-color);
+}
+
+.publication-authors {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.35rem;
+    line-height: 1.5;
+}
+
+.publication-authors strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.publication-venue {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.publication-venue::before {
+    content: '📖';
+    font-size: 0.85rem;
+}
+
+.publication-abstract {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    max-height: 80px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.publication-abstract.expanded {
+    max-height: 400px;
+}
+
+.publication-links {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.publication-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.85rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: white;
+    background: var(--gradient-text);
+    border: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.25);
+}
+
+.publication-link:hover {
+    color: white;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.35);
+}
+
+.publication-link.secondary {
+    background: rgba(255, 255, 255, 0.6);
+    color: var(--text-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: none;
+}
+
+.publication-link.secondary:hover {
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.35);
+}
+
+/* ==================== 响应式设计 ==================== */
+
+@media (max-width: 768px) {
+    .profile-name {
+        font-size: 2.25rem;
+    }
+    
+    .profile-section {
+        padding: 2.5rem 2rem;
+        border-radius: 20px;
+    }
+    
+    .section-card {
+        padding: 2rem 1.5rem;
+        border-radius: 16px;
+    }
+    
+    .social-links {
+        gap: 0.5rem;
+    }
+    
+    .social-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .publication-links {
+        flex-direction: column;
+    }
+    
+    .publication-link {
+        justify-content: center;
+    }
+    
+    .timeline {
+        padding-left: 2rem;
+    }
+    
+    .timeline-item::before {
+        left: -2rem;
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-avatar {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .profile-name {
+        font-size: 2rem;
+    }
+    
+    .container {
+        padding: 2rem 1rem;
+    }
+    
+    .profile-section {
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* ==================== 实用工具类 ==================== */
+
+/* 隐藏元素 */
+.hidden {
+    display: none !important;
+}
+
+/* 文本居中 */
+.text-center {
+    text-align: center;
+}
+
+/* 文本右对齐 */
+.text-right {
+    text-align: right;
+}
+
+/* 间距工具 */
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+.mt-5 { margin-top: 2rem; }
+
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mb-5 { margin-bottom: 2rem; }
+
+/* 徽章样式 */
+.inline-badge {
+    height: 16px;
+    vertical-align: -10%;
+    margin-right: 2px;
+    line-break: unset;
+}
+
+.no-break {
+    white-space: nowrap;
+}
+
+/* ==================== 合并的经历部分样式 ==================== */
+
+/* 合并的经验卡片 */
+.experience-section {
+    padding: 1.5rem 1.25rem;
+}
+
+/* 每个经历组 */
+.experience-group {
+    margin-bottom: 0;
+}
+
+.experience-group .section-title {
+    margin-bottom: 1rem;
+}
+
+/* 紧凑型时间线 */
+.compact-timeline {
+    padding-left: 1.5rem;
+}
+
+.compact-timeline::before {
+    left: 0;
+    width: 1.5px;
+}
+
+.compact-timeline .timeline-item {
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.compact-timeline .timeline-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.compact-timeline .timeline-item::before {
+    left: -1.5rem;
+    top: 0.2rem;
+    width: 8px;
+    height: 8px;
+}
+
+.compact-timeline .timeline-item:hover {
+    padding-left: 0.75rem;
+}
+
+.compact-timeline .timeline-item:hover::before {
+    transform: translateX(-5px) scale(1.1);
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+}
+
+.compact-timeline .timeline-date {
+    font-size: 0.75rem;
+    margin-bottom: 0.1rem;
+}
+
+.compact-timeline .timeline-title {
+    font-size: 0.95rem;
+    margin-bottom: 0.1rem;
+}
+
+.compact-timeline .timeline-subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+}
+
+/* 紧凑型奖励列表 */
+.compact-award-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.compact-award-item {
+    margin-bottom: 0;
+    padding: 0.6rem 0.85rem;
+}
+
+.compact-award-item:last-child {
+    margin-bottom: 0;
+}
+
+.compact-award-item .award-icon {
+    font-size: 1.15rem;
+    margin-right: 0.6rem;
+    min-width: 24px;
+}
+
+.compact-award-item .award-title {
+    font-size: 0.85rem;
+    margin-bottom: 0.05rem;
+}
+
+.compact-award-item .award-description {
+    font-size: 0.75rem;
+}
+
+/* ==================== Selected Papers 部分样式 ==================== */
+
+/* 引用徽章 */
+.citation-badge {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 1rem;
+    padding: 0.35rem 0.85rem;
+    background: var(--gradient-text);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.citation-badge #total-citations {
+    margin-right: 0.25rem;
+}
+
+/* 论文卡片 - 图片风格 */
+.paper-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--glass-shadow);
+    /* 滚动淡入动画 */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s ease;
+    will-change: opacity, transform;
+}
+
+.paper-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(31, 38, 135, 0.1);
+}
+
+.paper-card:last-child {
+    margin-bottom: 0;
+}
+
+/* 左右布局的卡片内部结构 */
+.paper-card-inner {
+    display: flex;
+    gap: 1.25rem;
+    align-items: stretch;
+}
+
+/* 左侧图片 - 与右侧内容等高 */
+.paper-image-left {
+    width: 180px;
+    height: auto;
+    max-height: none;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+    align-self: stretch;
+    background-color: #f0f0f0;
+}
+
+/* 右侧内容 */
+.paper-content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.paper-content .paper-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.4rem;
+    line-height: 1.4;
+}
+
+.paper-content .paper-authors {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.3rem;
+    line-height: 1.5;
+}
+
+.paper-content .paper-venue {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 0.6rem;
+}
+
+/* 胶囊标签样式 */
+.conference-tag {
+    display: inline-block;
+    background-color: #383636;
+    color: #ffffff;
+    padding: 2px 8px;
+    border-radius: 50px;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.7rem;
+    vertical-align: middle;
+    margin-right: 8px;
+    line-height: 1.5;
+}
+
+/* Publications 页面提醒样式 */
+.publications-notice {
+    background-color: #e6edff;
+    border-left: 3px solid #48b6ff;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    color: #333333;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.publications-notice .quote-mark {
+    color: #48b6ff;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1;
+    margin-right: 0.25rem;
+}
+
+.publications-notice .scholar-link {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: 600;
+    font-style: normal;
+    transition: all 0.3s ease;
+}
+
+.publications-notice .scholar-link:hover {
+    color: #48b6ff;
+    text-decoration: underline;
+}
+
+/* 论文提示框样式 */
+.paper-note {
+    display: inline-block;
+    background-color: #ffffff;
+    border-left: 3px solid #667eea;
+    padding: 4px 10px;
+    margin-top: 6px;
+    font-size: 0.75rem;
+    color: #666666;
+    font-style: normal;
+}
+
+.paper-content .paper-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.paper-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+}
+
+.paper-card:hover .paper-title {
+    color: var(--primary-color);
+}
+
+.paper-authors {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.4rem;
+    line-height: 1.5;
+}
+
+.paper-authors strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.paper-venue {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 0.75rem;
+}
+
+.paper-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.paper-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: rgba(102, 126, 234, 0.1);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    transition: all 0.3s ease;
+}
+
+.paper-link:hover {
+    color: white;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+/* 论文摘要 */
+.paper-abstract {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0.85rem;
+    max-height: 80px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.paper-abstract.expanded {
+    max-height: 300px;
+}
+
+/* ==================== 打印样式 ==================== */
+
+@media print {
+    .background-container,
+    .background-overlay,
+    .navbar,
+    .mouse-follower {
+        display: none !important;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .publication-item,
+    .section-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
+
+/* ==================== 滚动条美化 ==================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, var(--primary-color), var(--primary-dark));
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, var(--primary-dark), var(--primary-color));
+}
+
+/* ==================== 选中文本样式 ==================== */
+
+::selection {
+    background: rgba(102, 126, 234, 0.3);
+    color: var(--text-primary);
+}
+
+/* ==================== 滚动淡入动画 ==================== */
+
+/* 卡片初始状态（未进入视口） */
+.section-card,
+.paper-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s ease;
+    will-change: opacity, transform;
+}
+
+/* 卡片进入视口后的动画状态 */
+.section-card.fade-in-visible,
+.paper-card.fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 交错动画延迟 - 让卡片依次出现 */
+.section-card:nth-child(1).fade-in-visible,
+.paper-card:nth-child(1).fade-in-visible { transition-delay: 0.05s; }
+
+.section-card:nth-child(2).fade-in-visible,
+.paper-card:nth-child(2).fade-in-visible { transition-delay: 0.1s; }
+
+.section-card:nth-child(3).fade-in-visible,
+.paper-card:nth-child(3).fade-in-visible { transition-delay: 0.15s; }
+
+.section-card:nth-child(4).fade-in-visible,
+.paper-card:nth-child(4).fade-in-visible { transition-delay: 0.2s; }
+
+.section-card:nth-child(5).fade-in-visible,
+.paper-card:nth-child(5).fade-in-visible { transition-delay: 0.25s; }
+
+/* ==================== 导航栏滚动效果 ==================== */
+
+.navbar.scrolled {
+    padding: 0.75rem 0;
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(20px);
+}
+
+/* ==================== 摘要展开按钮样式 ==================== */
+
+.abstract-toggle {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 0;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.abstract-toggle:hover {
+    color: var(--primary-dark);
+}
+
+/* ==================== 头像占位符动画 ==================== */
+
+.avatar-placeholder {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+/* ==================== 鼠标跟随器（桌面端） ==================== */
+
+@media (hover: hover) {
+    .mouse-follower {
+        display: block;
+    }
+}
+
+@media (hover: none) {
+    .mouse-follower {
+        display: none !important;
+    }
+}
+
+/* ==================== 滚动条美化 ==================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, var(--primary-color), var(--primary-dark));
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, var(--primary-dark), var(--primary-color));
+}
+
+/* ==================== 选中文本样式 ==================== */
+
+::selection {
+    background: rgba(102, 126, 234, 0.3);
+    color: var(--text-primary);
+}
