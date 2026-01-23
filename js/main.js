@@ -154,7 +154,7 @@ function initNavbarScrollEffect() {
 function initScrollAnimations() {
     const observerOptions = {
         root: null,
-        rootMargin: '0px 0px -1px 0px',  /* 卡片顶部到达视口顶部时触发 */
+        rootMargin: '0px 0px 20% 0px',  /* 上一个卡片底部到达屏幕底部下方20%时触发下一个 */
         threshold: 0
     };
     
