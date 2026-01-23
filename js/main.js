@@ -154,8 +154,8 @@ function initNavbarScrollEffect() {
 function initScrollAnimations() {
     const observerOptions = {
         root: null,
-        rootMargin: '0px 0px -50px 0px',  /* 扩大视口范围，提前触发 */
-        threshold: 0.01                   /* 1% 可见即触发 */
+        rootMargin: '0px 0px -1px 0px',  /* 卡片顶部到达视口顶部时触发 */
+        threshold: 0
     };
     
     const observer = new IntersectionObserver((entries) => {
