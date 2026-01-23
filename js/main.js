@@ -154,8 +154,8 @@ function initNavbarScrollEffect() {
 function initScrollAnimations() {
     const observerOptions = {
         root: null,
-        rootMargin: '0px',
-        threshold: 0.1
+        rootMargin: '0px 0px -50px 0px',  /* 扩大视口范围，提前触发 */
+        threshold: 0.01                   /* 1% 可见即触发 */
     };
     
     const observer = new IntersectionObserver((entries) => {
@@ -166,9 +166,9 @@ function initScrollAnimations() {
         });
     }, observerOptions);
     
-    // 为卡片添加动画类
+    // 为卡片添加动画观察
     const cards = document.querySelectorAll('.section-card, .paper-card');
-    cards.forEach((card, index) => {
+    cards.forEach((card) => {
         observer.observe(card);
     });
 }

@@ -1334,9 +1334,9 @@ h1, h2, h3, h4, h5, h6,
 .section-card,
 .paper-card {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-                transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    transform: translateY(25px);
+    transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
                 box-shadow 0.3s ease;
     will-change: opacity, transform;
 }
@@ -1350,19 +1350,19 @@ h1, h2, h3, h4, h5, h6,
 
 /* 交错动画延迟 - 让卡片依次出现 */
 .section-card:nth-child(1).fade-in-visible,
-.paper-card:nth-child(1).fade-in-visible { transition-delay: 0.05s; }
+.paper-card:nth-child(1).fade-in-visible { transition-delay: 0s; }
 
 .section-card:nth-child(2).fade-in-visible,
-.paper-card:nth-child(2).fade-in-visible { transition-delay: 0.1s; }
+.paper-card:nth-child(2).fade-in-visible { transition-delay: 0.08s; }
 
 .section-card:nth-child(3).fade-in-visible,
-.paper-card:nth-child(3).fade-in-visible { transition-delay: 0.15s; }
+.paper-card:nth-child(3).fade-in-visible { transition-delay: 0.16s; }
 
 .section-card:nth-child(4).fade-in-visible,
-.paper-card:nth-child(4).fade-in-visible { transition-delay: 0.2s; }
+.paper-card:nth-child(4).fade-in-visible { transition-delay: 0.24s; }
 
 .section-card:nth-child(5).fade-in-visible,
-.paper-card:nth-child(5).fade-in-visible { transition-delay: 0.25s; }
+.paper-card:nth-child(5).fade-in-visible { transition-delay: 0.32s; }
 
 /* ==================== 导航栏滚动效果 ==================== */
 
